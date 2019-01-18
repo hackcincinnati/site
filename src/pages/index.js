@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Register from '../components/register'
+// import Register from '../components/register'
 import SEO from '../components/seo'
 
 const IndexPage = () => (
@@ -31,7 +31,7 @@ const IndexPage = () => (
       that will jump-start your first project. With newcomers and veterans
       alike, Hack Cincinnati is a surefire way to create something amazing.
     </p>
-    <Register />
+    // <Register />
   </Layout>
 )
 
