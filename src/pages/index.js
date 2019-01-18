@@ -18,12 +18,11 @@ const IndexPage = () => (
         `computer science`,
       ]}
     />
-    <h2>Cincinnati's largest high-school hackathon</h2>
+    <h2>Cincinnati's largest high-school hackathon!</h2>
     <p>
-      Hack Cincinnati is Cincinnati’s largest hackathon! Join hundreds of
-      high-school programmers to show off your computer science skills by
-      participating in this 24-hour event. It’s also all-inclusive — we have
-      free food, swag, and prizes!
+      Join hundreds of high-school programmers to show off your computer science
+      skills by participating in this 24-hour event. It’s also all-inclusive —{' '}
+      we have free food, swag, and prizes!
     </p>
     <p>
       Never coded before? Don’t worry! We’ve got workshops to help new coders
