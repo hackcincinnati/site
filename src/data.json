@@ -1,0 +1,66 @@
+{
+  "social": {
+    "twitter": "https://twitter.com/hackcincinnati",
+    "instagram": "https://instagram.com/hackcincinnati",
+    "facebook": "https://www.facebook.com/Hack-Cincinnati-2152997431681748",
+    "email": "mailto:masonhackclub@gmail.com"
+  },
+  "directors": [
+    {
+      "name": "Alishaan Ali",
+      "role": "Finance",
+      "image": "alishaan.jpg"
+    },
+    {
+      "name": "Kabir Doshi",
+      "role": "Logistics",
+      "image": "kabir.jpg"
+    },
+    {
+      "name": "Katherine Hu",
+      "role": "Sponsorship",
+      "image": "katherine.jpg"
+    },
+    {
+      "name": "Chris Lee",
+      "role": "Hacker Experience",
+      "image": "chris.jpg"
+    },
+    {
+      "name": "Jack Margeson",
+      "role": "Marketing",
+      "image": "jack.jpg"
+    }
+  ],
+
+  "advisors": [
+    {
+      "name": "Dalton Craven",
+      "image": "dalton.jpg"
+    },
+    {
+      "name": "Megan Cui",
+      "image": "megan.jpg"
+    },
+    {
+      "name": "Vikram Deepak",
+      "image": "vikram.jpg"
+    },
+    {
+      "name": "Nick Iten",
+      "image": "nick.jpg"
+    },
+    {
+      "name": "Mingjie Jiang",
+      "image": "mingjie.png"
+    },
+    {
+      "name": "Will Mechler",
+      "image": "will.jpg"
+    },
+    {
+      "name": "Mark Senne",
+      "image": "mark.jpg"
+    }
+  ]
+}

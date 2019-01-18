@@ -1,20 +1,37 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
-import Image from '../components/image'
+import Register from '../components/register'
 import SEO from '../components/seo'
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
+    <SEO
+      title="Home"
+      keywords={[
+        `hack`,
+        `cincinnati`,
+        `programming`,
+        `technology`,
+        `coding`,
+        `computer`,
+        `science`,
+        `computer science`,
+      ]}
+    />
+    <h2>Cincinnati's largest high-school hackathon</h2>
+    <p>
+      Hack Cincinnati is Cincinnati’s largest hackathon! Join hundreds of
+      high-school programmers to show off your computer science skills by
+      participating in this 24-hour event. It’s also all-inclusive — we have
+      free food, swag, and prizes!
+    </p>
+    <p>
+      Never coded before? Don’t worry! We’ve got workshops to help new coders
+      that will jump-start your first project. With newcomers and veterans
+      alike, Hack Cincinnati is a surefire way to create something amazing.
+    </p>
+    <Register />
   </Layout>
 )
 

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    title: `Hack Cincinnati`,
+    description: `Hack Cincinnati is the largest high school hackathon in the region, bringing hundreds of high school students together for programming and fun!`,
     author: `@gatsbyjs`,
   },
   plugins: [
