@@ -29,7 +29,7 @@ const StyledSubmit = styled.input`
 `
 
 const Register = () => (
-  <StyledForm name="preregister" method="POST" data-netlify="true">
+  <StyledForm name="preregister" method="POST" netlify data-netlify="true">
     <h3>Pre-Register Today!</h3>
     <label for="fname">First Name: </label>
     <StyledInput type="text" name="fname" />
