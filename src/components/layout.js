@@ -7,7 +7,7 @@ import './reset.css'
 
 const Color = styled.div`
   width: 100vw;
-  min-height: 500px;
+  min-height: 80vh;
   background: rgb(229, 252, 245);
   background: linear-gradient(
     180deg,
