@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Hack Cincinnati`,
     description: `Hack Cincinnati is the largest high school hackathon in the region, bringing hundreds of high school students together for programming and fun!`,
-    author: `@gatsbyjs`,
+    author: `@hackcincinnati`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -25,6 +25,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-90399761-5',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
