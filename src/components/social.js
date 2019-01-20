@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-const StyledA = styled.a`
+const StyledOutboundLink = styled(OutboundLink)`
   font-weight: bold;
   color: black;
 
@@ -15,9 +16,17 @@ const Social = () => (
     <h3>Want to learn more?</h3>
     <p>
       Follow us on{' '}
-      <StyledA href="https://facebook.com/hackcincinnati">Facebook</StyledA>,{' '}
-      <StyledA href="https://instagram.com/hackcincinnati">Instagram</StyledA>,{' '}
-      or <StyledA href="https://twitter.com/hackcincinnati">Twitter</StyledA>{' '}
+      <StyledOutboundLink href="https://facebook.com/hackcincinnati">
+        Facebook
+      </StyledOutboundLink>
+      ,{' '}
+      <StyledOutboundLink href="https://instagram.com/hackcincinnati">
+        Instagram
+      </StyledOutboundLink>
+      , or{' '}
+      <StyledOutboundLink href="https://twitter.com/hackcincinnati">
+        Twitter
+      </StyledOutboundLink>{' '}
       for more details and pre-registration updates!
     </p>
   </div>
