@@ -24,14 +24,11 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: `Poppins`,
-            variants: [`300`, `600`, `700`],
-          },
-        ],
+        google: {
+          families: ['Raleway:400, 500', 'Cabin:900'],
+        },
       },
     },
     {

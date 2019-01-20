@@ -1,9 +1,21 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 import Landing from '../components/landing'
+
 import './reset.css'
+
+const GlobalStyles = createGlobalStyle`
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cabin', sans-serif;
+    font-weight: 900;
+  }
+  body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+  }
+`
 
 const Color = styled.div`
   width: 100vw;
@@ -24,6 +36,7 @@ const Box = styled.div`
 
 const Layout = ({ children }) => (
   <>
+    <GlobalStyles />
     <Landing />
     <Color>
       <Box>{children}</Box>

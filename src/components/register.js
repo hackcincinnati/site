@@ -32,16 +32,16 @@ const Register = () => (
   <StyledForm name="preregister" method="POST" netlify data-netlify="true">
     <h3>Pre-Register Today!</h3>
     <input type="hidden" name="form-name" value="preregister" />
-    <label for="fname">First Name: </label>
+    <label htmlFor="fname">First Name: </label>
     <StyledInput type="text" name="fname" />
     <br />
-    <label for="lname">Last Name: </label>
+    <label htmlFor="lname">Last Name: </label>
     <StyledInput type="text" name="lname" />
     <br />
-    <label for="email">Email: </label>
+    <label htmlFor="email">Email: </label>
     <StyledInput type="text" name="email" />
     <br />
-    <label for="role">I am a: </label>
+    <label htmlFor="role">I am a: </label>
     <StyledSelect name="role">
       <option value="student">Student</option>
       <option value="student">Parent</option>
