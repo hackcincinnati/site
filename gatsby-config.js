@@ -8,6 +8,8 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -32,6 +34,13 @@ module.exports = {
         theme_color: `#00ab92`,
         display: `browser`,
         icon: `src/images/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
   ],

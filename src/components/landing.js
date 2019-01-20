@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import image from '../images/primary-logo.svg'
+import Logo from '../components/Logo'
 
 const Hero = styled.div`
   width: 100vw;
@@ -14,14 +13,10 @@ const Info = styled.div`
   max-width: 800px;
 `
 
-const Logo = styled.img`
-  width: 500px;
-`
-
 const Landing = () => (
   <Hero>
     <Info>
-      <Logo src={image} />
+      <Logo />
     </Info>
   </Hero>
 )
