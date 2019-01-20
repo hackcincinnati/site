@@ -1,6 +1,12 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
+import styled from 'styled-components'
 import Img from 'gatsby-image'
+
+const StyledImg = styled(Img)`
+  width: 100%;
+  max-width: 500px;
+`
 
 export default () => (
   <StaticQuery
@@ -8,15 +14,13 @@ export default () => (
       query {
         file(relativePath: { eq: "primary-logo.png" }) {
           childImageSharp {
-            # Specify the image processing specifications right in the query.
-            # Makes it trivial to update as your page's design changes.
-            fixed(width: 500) {
-              ...GatsbyImageSharpFixed_tracedSVG
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
       }
     `}
-    render={data => <Img fixed={data.file.childImageSharp.fixed} />}
+    render={data => <StyledImg fluid={data.file.childImageSharp.fluid} />}
   />
 )
