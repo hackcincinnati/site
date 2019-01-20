@@ -31,6 +31,7 @@ const StyledSubmit = styled.input`
 const Register = () => (
   <StyledForm name="preregister" method="POST" netlify data-netlify="true">
     <h3>Pre-Register Today!</h3>
+    <input type="hidden" name="form-name" value="preregister" />
     <label for="fname">First Name: </label>
     <StyledInput type="text" name="fname" />
     <br />
