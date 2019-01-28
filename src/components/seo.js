@@ -3,59 +3,86 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, location }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
-        const metaDescription =
-          description || data.site.siteMetadata.description
+        const metaTitle = title + ' | ' + data.site.siteMetadata.title
+        const metaURL = 'https://hackcincinnati.io' + (location || '/')
         return (
           <Helmet
             htmlAttributes={{
-              lang,
+              lang
             }}
-            title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            title={metaTitle}
             meta={[
               {
                 name: `description`,
-                content: metaDescription,
+                content: data.site.siteMetadata.description
               },
               {
                 property: `og:title`,
-                content: title,
+                content: metaTitle
               },
               {
                 property: `og:description`,
-                content: metaDescription,
+                content: data.site.siteMetadata.description
               },
               {
                 property: `og:type`,
-                content: `website`,
+                content: `website`
+              },
+              {
+                property: `og:url`,
+                content: metaURL
+              },
+              {
+                property: `og:image`,
+                content: `https://hackcincinnati.io/logo.png`
+              },
+              {
+                property: `og:image:width`,
+                content: `1000`
+              },
+              {
+                property: `og:image:height`,
+                content: `1000`
+              },
+              {
+                property: `og:image:alt`,
+                content: `Hack Cincinnati's official logo, consisting of line-art of the Cincinnati skyline.`
               },
               {
                 name: `twitter:card`,
-                content: `summary`,
+                content: `summary_large_image`
               },
               {
                 name: `twitter:creator`,
-                content: data.site.siteMetadata.author,
+                content: data.site.siteMetadata.author
               },
               {
                 name: `twitter:title`,
-                content: title,
+                content: metaTitle
               },
               {
                 name: `twitter:description`,
-                content: metaDescription,
+                content: data.site.siteMetadata.description
               },
+              {
+                name: `twitter:url`,
+                content: metaURL
+              },
+              {
+                name: `twitter:image`,
+                content: `https://hackcincinnati.io/logo.png`
+              }
             ]
               .concat(
                 keywords.length > 0
                   ? {
                       name: `keywords`,
-                      content: keywords.join(`, `),
+                      content: keywords.join(`, `)
                     }
                   : []
               )
@@ -70,7 +97,7 @@ function SEO({ description, lang, meta, keywords, title }) {
 SEO.defaultProps = {
   lang: `en`,
   meta: [],
-  keywords: [],
+  keywords: []
 }
 
 SEO.propTypes = {
@@ -78,7 +105,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired
 }
 
 export default SEO
