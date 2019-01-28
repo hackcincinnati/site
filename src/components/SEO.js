@@ -38,7 +38,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
                 content: metaURL
               },
               {
-                property: `og:image`,
+                property: `og:image:url`,
                 content: `https://hackcincinnati.io/logo.png`
               },
               {
