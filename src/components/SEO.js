@@ -9,7 +9,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
       query={detailsQuery}
       render={data => {
         const metaTitle = title + ' | ' + data.site.siteMetadata.title
-        const metaURL = 'hackcincinnati.io' + (location || '/')
+        const metaURL = 'https://hackcincinnati.io' + (location || '/')
         return (
           <Helmet
             htmlAttributes={{
@@ -42,12 +42,20 @@ function SEO({ description, lang, meta, keywords, title, location }) {
                 content: `https://hackcincinnati.io/logo.png`
               },
               {
+                property: `og:image:width`,
+                content: `1000`
+              },
+              {
+                property: `og:image:height`,
+                content: `1000`
+              },
+              {
                 property: `og:image:alt`,
                 content: `Hack Cincinnati's official logo, consisting of line-art of the Cincinnati skyline.`
               },
               {
                 name: `twitter:card`,
-                content: `summary`
+                content: `summary_large_image`
               },
               {
                 name: `twitter:creator`,
