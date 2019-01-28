@@ -41,6 +41,12 @@ const Register = () => (
     <label htmlFor="email">Email: </label>
     <StyledInput type="text" name="email" />
     <br />
+    <label htmlFor="school">School: </label>
+    <StyledInput type="text" name="school" />
+    <br />
+    <label htmlFor="city">City: </label>
+    <StyledInput type="text" name="city" />
+    <br />
     <label htmlFor="role">I am a: </label>
     <StyledSelect name="role">
       <option value="student">Student</option>
