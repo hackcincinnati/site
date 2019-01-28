@@ -39,15 +39,15 @@ function SEO({ description, lang, meta, keywords, title, location }) {
               },
               {
                 property: `og:image:url`,
-                content: `https://hackcincinnati.io/logo.png`
+                content: `https://hackcincinnati.io/logo-facebook.png`
               },
               {
                 property: `og:image:width`,
-                content: `1000`
+                content: `1200`
               },
               {
                 property: `og:image:height`,
-                content: `1000`
+                content: `630`
               },
               {
                 property: `og:image:alt`,
@@ -79,7 +79,15 @@ function SEO({ description, lang, meta, keywords, title, location }) {
               },
               {
                 name: `twitter:image`,
-                content: `https://hackcincinnati.io/logo.png`
+                content: `https://hackcincinnati.io/logo-twitter.png`
+              },
+              {
+                name: `twitter:image:width`,
+                content: `1012`
+              },
+              {
+                name: `twitter:image:height`,
+                content: `506`
               }
             ]
               .concat(
