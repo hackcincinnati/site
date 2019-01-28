@@ -1,18 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
-
-const StyledOutboundLink = styled(OutboundLink)`
-  font-weight: bold;
-  color: black;
-
-  :hover {
-    color: black;
-  }
-`
+import { StyledOutboundLink, Container, Color } from '../components/Theme'
 
 const Social = () => (
-  <div>
+  <Container>
     <h3>Want to learn more?</h3>
     <p>
       Follow us on{' '}
@@ -29,7 +19,7 @@ const Social = () => (
       </StyledOutboundLink>{' '}
       for more details and pre-registration updates!
     </p>
-  </div>
+  </Container>
 )
 
 export default Social

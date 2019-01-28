@@ -1,13 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { breakpoints, colors } from '../components/Theme'
+import { breakpoints, colors, Color } from '../components/Theme'
 import logo from '../images/logo-white.svg'
-
-const Color = styled.div`
-  width: 100vw;
-  background-color: ${colors.primary};
-  color: white;
-`
 
 const Container = styled.div`
   padding: 25px;
@@ -39,11 +33,11 @@ const StyledLogo = styled.img`
 `
 
 const Landing = () => (
-  <Color>
+  <Color background={colors.primary} color={colors.white}>
     <Container>
       <StyledLogo src={logo} />
       <Info>
-        <h3>Cincinnati's largest high school hackathon.</h3>
+        <h3>The Midwest's largest high school hackathon.</h3>
         <h4>
           July 20<sup>th</sup>&ndash;21<sup>st</sup>
         </h4>

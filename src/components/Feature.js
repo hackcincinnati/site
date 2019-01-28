@@ -1,26 +1,22 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
+import { breakpoints } from '../components/Theme'
 
 const Container = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  @media (max-width: 500px) {
-    display: inherit;
+  margin: 10px 0;
+  @media (min-width: ${breakpoints.mobile}) {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 25px 0 75px;
   }
 `
 
 const ImageDiv = styled.div`
-  width: 40%;
-  max-width: 250px;
-  margin-right: 10px;
-  @media (max-width: 500px) {
-    width: 100%;
-    margin-right: 0;
+  @media (min-width: ${breakpoints.mobile}) {
+    ${props => (props.reversed ? 'margin-left' : 'margin-right')}: 50px;
   }
 `
 
@@ -28,21 +24,28 @@ const StyledImage = styled(Img)`
   width: 100%;
   border-radius: 10px;
   margin-bottom: 0;
-`
-
-const Description = styled.p`
-  width: 50%;
-  @media (max-width: 500px) {
-    width: 100%;
+  @media (min-width: ${breakpoints.mobile}) {
+    width: 400px;
   }
 `
 
-const Feature = ({ image, description }) => (
+const Description = styled.div`
+  width: 100%;
+  margin: 10px 0;
+  @media (min-width: ${breakpoints.mobile}) {
+    order: ${props => (props.reversed ? '-1' : '0')};
+  }
+`
+
+const Feature = ({ title, image, description, reversed }) => (
   <Container>
     <ImageDiv>
       <StyledImage fluid={image} alt="CincyHacks Students" />
     </ImageDiv>
-    <Description>{description}</Description>
+    <Description reversed={reversed}>
+      <h3>{title}</h3>
+      <p>{description}</p>
+    </Description>
   </Container>
 )
 export default Feature

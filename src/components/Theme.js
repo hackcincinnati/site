@@ -1,16 +1,37 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 export const breakpoints = {
   mobile: '500px',
-  desktop: '800px',
+  desktop: '950px'
 }
 
 export const colors = {
   primary: '#00AB92',
   dark: '#363534',
   light: '#E5FCF5',
-  white: '#FFFFFF',
+  white: '#FFFFFF'
 }
+
+export const Color = styled.div`
+  width: 100vw;
+  background-color: ${props => props.background || colors.primary};
+  color: ${props => props.color || colors.white};
+`
+
+export const Container = styled.div`
+  margin: 50px auto;
+  max-width: ${breakpoints.desktop};
+  padding: 10px;
+`
+
+export const StyledOutboundLink = styled(OutboundLink)`
+  color: inherit;
+
+  :hover {
+    color: inherit;
+  }
+`
 
 export const GlobalStyles = createGlobalStyle`
   html {

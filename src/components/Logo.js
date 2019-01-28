@@ -14,7 +14,7 @@ export default () => (
       query {
         file(relativePath: { eq: "primary-logo.png" }) {
           childImageSharp {
-            fluid(maxWidth: 350) {
+            fluid(maxWidth: 500) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
