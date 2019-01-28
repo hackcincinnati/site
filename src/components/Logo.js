@@ -14,13 +14,13 @@ export default () => (
       query {
         file(relativePath: { eq: "primary-logo.png" }) {
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 350) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
         }
       }
     `}
-    render={data => <StyledImg fluid={data.file.childImageSharp.fluid} />}
+    render={data => <Img fluid={data.file.childImageSharp.fluid} />}
   />
 )

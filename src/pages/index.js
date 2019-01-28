@@ -1,9 +1,10 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import Register from '../components/register'
-import Social from '../components/social'
-import SEO from '../components/seo'
+import Layout from '../components/Layout'
+import Features from '../components/Features'
+import Register from '../components/Register'
+import Social from '../components/Social'
+import SEO from '../components/SEO'
 
 const IndexPage = () => (
   <Layout>
@@ -17,20 +18,10 @@ const IndexPage = () => (
         `coding`,
         `computer`,
         `science`,
-        `computer science`,
+        `computer science`
       ]}
     />
-    <h2>Cincinnati's largest high-school hackathon!</h2>
-    <p>
-      Join hundreds of high-school programmers to show off your computer science
-      skills by participating in this 24-hour event. It’s also all-inclusive —{' '}
-      we have free food, swag, and prizes!
-    </p>
-    <p>
-      Never coded before? Don’t worry! We’ve got workshops to help new coders
-      that will jump-start your first project. With newcomers and veterans
-      alike, Hack Cincinnati is a surefire way to create something amazing.
-    </p>
+    <Features />
     <Register />
     <Social />
   </Layout>
