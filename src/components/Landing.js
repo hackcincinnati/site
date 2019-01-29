@@ -10,6 +10,7 @@ const Container = styled.div`
   margin: 0 auto;
 
   @media (min-width: ${breakpoints.mobile}) {
+    padding: 50px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,6 +22,9 @@ const Info = styled.div`
   padding: 0px 10px;
   margin: 0 auto;
   text-align: center;
+  h4 {
+    margin-bottom: 0;
+  }
 `
 
 const StyledLogo = styled.img`
