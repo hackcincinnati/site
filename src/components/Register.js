@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Container, breakpoints, colors } from '../components/Theme'
+import { Container, breakpoints } from '../components/Theme'
 import RegisterForm from '../components/RegisterForm'
 
 const FlexContainer = styled.div`
