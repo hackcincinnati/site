@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { StyledOutboundLink, Container, Color } from '../components/Theme'
 
 const Social = () => (
