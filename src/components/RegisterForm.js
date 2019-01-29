@@ -27,12 +27,29 @@ const StyledSelect = styled.select`
 
 const StyledSubmit = styled.input`
   margin: 8px 0;
-  background-color: white;
+  background-color: ${colors.primary};
   border: none;
-  color: #00ab92;
+  color: ${colors.white};
   padding: 16px 32px;
   text-decoration: none;
   margin: 4px 2px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  cursor: pointer;
+
+  :hover,
+  :focus,
+  :active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 `
 
 const RegisterForm = () => (
@@ -40,22 +57,22 @@ const RegisterForm = () => (
     <h3>Pre-Registration</h3>
     <input type="hidden" name="form-name" value="preregister" />
     <label htmlFor="fname">First Name: </label>
-    <StyledInput type="text" name="fname" />
+    <StyledInput type="text" name="fname" required />
     <br />
     <label htmlFor="lname">Last Name: </label>
-    <StyledInput type="text" name="lname" />
+    <StyledInput type="text" name="lname" required />
     <br />
     <label htmlFor="email">Email: </label>
-    <StyledInput type="text" name="email" />
+    <StyledInput type="email" name="email" required />
     <br />
     <label htmlFor="school">School: </label>
-    <StyledInput type="text" name="school" />
+    <StyledInput type="text" name="school" required />
     <br />
     <label htmlFor="city">City: </label>
-    <StyledInput type="text" name="city" />
+    <StyledInput type="text" name="city" required />
     <br />
     <label htmlFor="role">I am a: </label>
-    <StyledSelect name="role">
+    <StyledSelect name="role" required>
       <option value="student">Student</option>
       <option value="student">Parent</option>
       <option value="teacher">Teacher</option>
