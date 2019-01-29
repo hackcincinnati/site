@@ -20,14 +20,19 @@ export const Color = styled.div`
 `
 
 export const Container = styled.div`
-  margin: 50px auto;
+  margin: 0 auto;
   max-width: ${breakpoints.desktop};
-  padding: 10px;
+  padding: 20px 10px;
+  p {
+    margin: 0;
+  }
+  @media (min-width: ${breakpoints.mobile}) {
+    padding: 50px 10px;
+  }
 `
 
 export const StyledOutboundLink = styled(OutboundLink)`
   color: inherit;
-
   :hover {
     color: inherit;
   }

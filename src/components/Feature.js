@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { breakpoints } from '../components/Theme'
 
-const Container = styled.div`
+const FlexContainer = styled.div`
   margin: 10px 0;
   @media (min-width: ${breakpoints.mobile}) {
     display: flex;
@@ -31,21 +31,28 @@ const StyledImage = styled(Img)`
 
 const Description = styled.div`
   width: 100%;
-  margin: 10px 0;
+  h3 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
   @media (min-width: ${breakpoints.mobile}) {
     order: ${props => (props.reversed ? '-1' : '0')};
+    h3 {
+      margin-bottom: inherit;
+      margin-top: inherit;
+    }
   }
 `
 
 const Feature = ({ title, image, description, reversed }) => (
-  <Container>
-    <ImageDiv>
+  <FlexContainer>
+    <ImageDiv reversed={reversed}>
       <StyledImage fluid={image} alt="CincyHacks Students" />
     </ImageDiv>
     <Description reversed={reversed}>
       <h3>{title}</h3>
       <p>{description}</p>
     </Description>
-  </Container>
+  </FlexContainer>
 )
 export default Feature
