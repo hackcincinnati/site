@@ -57,19 +57,35 @@ const RegisterForm = () => (
     <h3>Pre-Registration</h3>
     <input type="hidden" name="form-name" value="preregister" />
     <label htmlFor="fname">First Name: </label>
-    <StyledInput type="text" name="fname" required />
+    <StyledInput type="text" name="fname" autocomplete="given-name" required />
     <br />
     <label htmlFor="lname">Last Name: </label>
-    <StyledInput type="text" name="lname" required />
+    <StyledInput type="text" name="lname" autocomplete="family-name" required />
     <br />
     <label htmlFor="email">Email: </label>
-    <StyledInput type="email" name="email" required />
+    <StyledInput type="email" name="email" autocomplete="email" required />
     <br />
     <label htmlFor="school">School: </label>
     <StyledInput type="text" name="school" required />
     <br />
     <label htmlFor="city">City: </label>
-    <StyledInput type="text" name="city" required />
+    <StyledInput
+      type="text"
+      name="city"
+      autocomplete="address-level2"
+      required
+    />
+    <br />
+    <label htmlFor="state">State: </label>
+    <StyledInput
+      type="text"
+      name="state"
+      autocomplete="address-level1"
+      required
+    />
+    <br />
+    <label htmlFor="zip">ZIP Code: </label>
+    <StyledInput type="text" name="zip" autocomplete="postal-code" required />
     <br />
     <label htmlFor="role">I am a: </label>
     <StyledSelect name="role" required>
