@@ -1,24 +1,53 @@
 import React from 'react'
 import styled from 'styled-components'
-import Logo from '../components/Logo'
+import { breakpoints, colors, Color } from '../components/Theme'
+import logo from '../images/logo-white.svg'
 
-const Hero = styled.div`
-  width: 100vw;
-  padding: 50px;
+const Container = styled.div`
+  padding: 25px;
+  width: 100%;
+  max-width: ${breakpoints.desktop};
+  margin: 0 auto;
+
+  @media (min-width: ${breakpoints.mobile}) {
+    padding: 50px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
 `
 
 const Info = styled.div`
   padding: 0px 10px;
   margin: 0 auto;
-  max-width: 800px;
+  text-align: center;
+  h4 {
+    margin-bottom: 0;
+  }
+`
+
+const StyledLogo = styled.img`
+  width: 100%;
+  max-width: 350px;
+  margin-bottom: 25px;
+  @media (min-width: ${breakpoints.mobile}) {
+    margin-right: 10px;
+  }
 `
 
 const Landing = () => (
-  <Hero>
-    <Info>
-      <Logo />
-    </Info>
-  </Hero>
+  <Color background={colors.primary} color={colors.white}>
+    <Container>
+      <StyledLogo src={logo} />
+      <Info>
+        <h3>The Midwest's largest high school hackathon.</h3>
+        <h4>
+          July 20<sup>th</sup>&ndash;21<sup>st</sup>
+        </h4>
+      </Info>
+    </Container>
+  </Color>
 )
 
 export default Landing

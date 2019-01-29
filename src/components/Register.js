@@ -1,62 +1,63 @@
 import React from 'react'
 import styled from 'styled-components'
+import Img from 'gatsby-image'
+import { StaticQuery, graphql } from 'gatsby'
 
-const StyledForm = styled.form`
+import { Container, breakpoints } from '../components/Theme'
+import RegisterForm from '../components/RegisterForm'
+
+const FlexContainer = styled.div`
+  margin: 10px 0;
+  @media (min-width: ${breakpoints.mobile}) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px 0 75px;
+  }
+`
+
+const StyledInfo = styled.div`
   width: 100%;
-  max-width: 500px;
+  @media (min-width: ${breakpoints.mobile}) {
+    width: 45%;
+    margin-right: 10px;
+  }
 `
 
-const StyledInput = styled.input`
+const StyledImage = styled(Img)`
   width: 100%;
-  padding: 6px 12px;
-  margin: 8px 0;
-  box-sizing: border-box;
+  border-radius: 10px;
+  margin-bottom: 20px;
 `
 
-const StyledSelect = styled.select`
-  margin: 8px 0;
-  padding: 16px 20px;
-`
-
-const StyledSubmit = styled.input`
-  margin: 8px 0;
-  background-color: #00ab92;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-decoration: none;
-  margin: 4px 2px;
-`
-
-const Register = () => (
-  <StyledForm name="preregister" method="POST" netlify data-netlify="true">
-    <h3>Pre-Register Today!</h3>
-    <input type="hidden" name="form-name" value="preregister" />
-    <label htmlFor="fname">First Name: </label>
-    <StyledInput type="text" name="fname" />
-    <br />
-    <label htmlFor="lname">Last Name: </label>
-    <StyledInput type="text" name="lname" />
-    <br />
-    <label htmlFor="email">Email: </label>
-    <StyledInput type="text" name="email" />
-    <br />
-    <label htmlFor="school">School: </label>
-    <StyledInput type="text" name="school" />
-    <br />
-    <label htmlFor="city">City: </label>
-    <StyledInput type="text" name="city" />
-    <br />
-    <label htmlFor="role">I am a: </label>
-    <StyledSelect name="role">
-      <option value="student">Student</option>
-      <option value="student">Parent</option>
-      <option value="teacher">Teacher</option>
-      <option value="other">Other</option>
-    </StyledSelect>
-    <br />
-    <StyledSubmit type="submit" text="Submit" />
-  </StyledForm>
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        image: file(relativePath: { eq: "features/feature-4.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 500) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+      }
+    `}
+    render={data => (
+      <Container>
+        <FlexContainer>
+          <StyledInfo>
+            <h1>Pre-Register Today!</h1>
+            <p>
+              Sign up to be alerted when registration starts! By pre-registering
+              now you'll guarantee your spot in Hack Cincinnati.
+            </p>
+            <StyledImage fluid={data.image.childImageSharp.fluid} />
+          </StyledInfo>
+          <RegisterForm />
+        </FlexContainer>
+      </Container>
+    )}
+  />
 )
-
-export default Register

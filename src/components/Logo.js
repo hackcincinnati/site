@@ -21,6 +21,6 @@ export default () => (
         }
       }
     `}
-    render={data => <StyledImg fluid={data.file.childImageSharp.fluid} />}
+    render={data => <Img fluid={data.file.childImageSharp.fluid} />}
   />
 )

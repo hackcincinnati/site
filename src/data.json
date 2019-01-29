@@ -5,6 +5,10 @@
     "facebook": "https://www.facebook.com/Hack-Cincinnati-2152997431681748",
     "email": "mailto:masonhackclub@gmail.com"
   },
+  "features": [
+    "Last year, we ran <a hrefCincyHacks, Cincinnati’s largest high school hackathon. CincyHacks was a massive success —  we had over 80 students present 16 different ideas. This year, we’re kicking it up a notch: we’re bringing in leaders from Hack Camp, Hack Chicago, McDonogh Hacks, and CodeDay to run an event for 300 high school programmers, hackers, and designers.",
+    "As one of those 300 hackers, you’ll work in a team for 24 hours to create your own project — be it an app, game, or website. To help, we’ll provide free food, swag, mentorship, and workshops. At the end of the event, your team will present to a panel of judges for a chance to win some fabulous prizes."
+  ],
   "directors": [
     {
       "name": "Alishaan Ali",
