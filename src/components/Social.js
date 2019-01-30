@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { StyledOutboundLink, Container, Color } from '../components/Theme'
+import {
+  StyledOutboundLink,
+  Container,
+  Color,
+  colors
+} from '../components/Theme'
 
 const Social = () => (
   <Color>
@@ -8,15 +13,24 @@ const Social = () => (
       <h3>Want to learn more?</h3>
       <p>
         Follow us on{' '}
-        <StyledOutboundLink href="https://facebook.com/hackcincinnati">
+        <StyledOutboundLink
+          href="https://facebook.com/hackcincinnati"
+          color={colors.white}
+        >
           Facebook
         </StyledOutboundLink>
         ,{' '}
-        <StyledOutboundLink href="https://instagram.com/hackcincinnati">
+        <StyledOutboundLink
+          href="https://instagram.com/hackcincinnati"
+          color={colors.white}
+        >
           Instagram
         </StyledOutboundLink>
         , or{' '}
-        <StyledOutboundLink href="https://twitter.com/hackcincinnati">
+        <StyledOutboundLink
+          href="https://twitter.com/hackcincinnati"
+          color={colors.white}
+        >
           Twitter
         </StyledOutboundLink>{' '}
         for more details and pre-registration updates!

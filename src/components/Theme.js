@@ -27,14 +27,33 @@ export const Container = styled.div`
     margin: 0;
   }
   @media (min-width: ${breakpoints.mobile}) {
-    padding: 50px 10px;
+    padding: ${props => props.padding || '50px'} 10px;
   }
 `
 
 export const StyledOutboundLink = styled(OutboundLink)`
+  text-decoration: none;
+  font-weight: bold;
   color: inherit;
-  :hover {
-    color: inherit;
+  position: relative;
+  overflow: hidden;
+  :before {
+    content: '';
+    position: absolute;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background-color: ${props => props.color || colors.primary};
+    height: 4px;
+    transition-property: left, right;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+  }
+  :hover:before,
+  :focus:before,
+  :active:before {
+    left: 0;
+    right: 0;
   }
 `
 
