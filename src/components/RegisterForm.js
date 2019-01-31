@@ -4,7 +4,7 @@ import { breakpoints, colors } from '../components/Theme'
 
 const StyledForm = styled.form`
   width: 100%;
-  background-color: ${colors.light};
+  background-color: ${colors.white};
   color: ${colors.dark};
   padding: 20px;
   border-radius: 10px;

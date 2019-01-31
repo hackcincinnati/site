@@ -23,8 +23,8 @@ const IndexPage = () => (
       ]}
     />
     <Features />
-    <Staff />
     <Register />
+    <Staff />
     <Social />
   </Layout>
 )
