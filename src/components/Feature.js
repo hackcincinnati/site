@@ -44,14 +44,14 @@ const Description = styled.div`
   }
 `
 
-const Feature = ({ title, image, description, reversed }) => (
+const Feature = ({ details, image, reversed }) => (
   <FlexContainer>
     <ImageDiv reversed={reversed}>
       <StyledImage fluid={image} alt="CincyHacks Students" />
     </ImageDiv>
     <Description reversed={reversed}>
-      <h3>{title}</h3>
-      <p>{description}</p>
+      <h3>{details.title}</h3>
+      <p>{details.description}</p>
     </Description>
   </FlexContainer>
 )
