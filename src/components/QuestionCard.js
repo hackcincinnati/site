@@ -16,11 +16,11 @@ const Info = styled.div`
   border-radius: 10px;
 `
 
-const QuestionCard = ({ details }) => (
+const QuestionCard = ({ question, answer }) => (
   <Container>
     <Info>
-      <h2>{details.question}</h2>
-      <p>{details.answer}</p>
+      <h2>{question}</h2>
+      <p>{answer}</p>
     </Info>
   </Container>
 )

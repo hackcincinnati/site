@@ -45,7 +45,11 @@ export const staffImage = graphql`
 const Person = ({ details, image }) => (
   <Container>
     <Info>
-      <OutboundLink href={details.social.linkedin}>
+      <OutboundLink
+        target="_blank"
+        rel="noopener noreferrer"
+        href={details.social.linkedin}
+      >
         <StyledImage fixed={image} alt={details.name} />
       </OutboundLink>
       <h3>{details.name}</h3>

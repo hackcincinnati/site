@@ -63,7 +63,12 @@ export const StyledLink = styled(Link)`
   ${linkStyles};
 `
 
-export const StyledOutboundLink = styled(OutboundLink)`
+export const StyledOutboundLink = styled(OutboundLink).attrs(
+  ({ target, rel }) => ({
+    target: target || '_blank',
+    rel: rel || 'noopener noreferrer'
+  })
+)`
   ${linkStyles};
 `
 
