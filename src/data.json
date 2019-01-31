@@ -19,6 +19,32 @@
       "description": "Hack Cincinnati aims to be inclusive to all skill levels. As a beginner, you could attend one of the workshops designed to jump-start your project. If you’re a veteran hacker, we’ll provide personalized mentorship to help refine your skills. We also have numerous non-coding events planned to give your mind (and fingers!) a much-needed break."
     }
   },
+  "faqs": [
+    {
+      "question": "What should I bring?",
+      "answer": "At the minimum, you'll need a student ID, laptop, and charger. We also recommend bringing a change of clothes, toiletries, and a sleeping bag or pillow. You won't be able to leave Hack Cincinnati after the event starts, so make sure you have any medications you'll need."
+    },
+    {
+      "question": "Do I need to know how to code?",
+      "answer": "Hack Cincinnati is open to all skill levels – both beginner and veteran coders may attend."
+    },
+    {
+      "question": "Who can come to Hack Cincinnati?",
+      "answer": "Any current high school is welcome to come to Hack Cincinnati – all we ask is that you bring a school issued ID with you. Additionally, teachers and parents are welcome to come to the final awards ceremony."
+    },
+    {
+      "question": "Is Hack Cincinnati free?",
+      "answer": "Yes, Hack Cincinnati is completely free. This includes meals, drinks, swag, and workshops."
+    },
+    {
+      "question": "Is there a code of conduct?",
+      "answer": "Yes. Please read our Code of Conduct carefully prior to attending."
+    },
+    {
+      "question": "How long is Hack Cincinnati?",
+      "answer": "You will have 24 hours to work on your projects at Hack Cincinnati. We will also have activities before and after the block of coding, so expect to be there from Saturday afternoon to Sunday evening."
+    }
+  ],
   "directors": {
     "alishaan": {
       "name": "Alishaan Ali",

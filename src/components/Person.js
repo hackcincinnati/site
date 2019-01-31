@@ -42,7 +42,7 @@ export const staffImage = graphql`
   }
 `
 
-const Feature = ({ details, image }) => (
+const Person = ({ details, image }) => (
   <Container>
     <Info>
       <OutboundLink href={details.social.linkedin}>
@@ -53,4 +53,4 @@ const Feature = ({ details, image }) => (
     </Info>
   </Container>
 )
-export default Feature
+export default Person
