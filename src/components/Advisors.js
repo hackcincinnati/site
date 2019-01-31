@@ -38,7 +38,7 @@ export default () => (
         will: file(relativePath: { eq: "staff/advisors/will.jpg" }) {
           ...staffImage
         }
-        mark: file(relativePath: { eq: "staff/temp.png" }) {
+        mark: file(relativePath: { eq: "staff/advisors/mark.jpg" }) {
           ...staffImage
         }
         annie: file(relativePath: { eq: "staff/advisors/annie.jpg" }) {
