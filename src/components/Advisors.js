@@ -20,7 +20,7 @@ export default () => (
         dalton: file(relativePath: { eq: "staff/advisors/dalton.jpg" }) {
           ...staffImage
         }
-        megan: file(relativePath: { eq: "staff/temp.png" }) {
+        megan: file(relativePath: { eq: "staff/advisors/megan.png" }) {
           ...staffImage
         }
         vikram: file(relativePath: { eq: "staff/advisors/vikram.jpg" }) {

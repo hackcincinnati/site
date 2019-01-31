@@ -20,13 +20,13 @@ export default () => (
         alishaan: file(relativePath: { eq: "staff/directors/alishaan.jpg" }) {
           ...staffImage
         }
-        kabir: file(relativePath: { eq: "staff/temp.png" }) {
+        kabir: file(relativePath: { eq: "staff/directors/kabir.jpg" }) {
           ...staffImage
         }
         katherine: file(relativePath: { eq: "staff/directors/katherine.jpg" }) {
           ...staffImage
         }
-        chris: file(relativePath: { eq: "staff/temp.png" }) {
+        chris: file(relativePath: { eq: "staff/directors/chris.jpg" }) {
           ...staffImage
         }
         jack: file(relativePath: { eq: "staff/directors/jack.png" }) {
