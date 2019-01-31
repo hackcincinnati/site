@@ -1,4 +1,4 @@
-# Hack Cincinnati
+# Hack Cincinnati [![Netlify Status](https://api.netlify.com/api/v1/badges/7346c0f6-7458-4e45-82da-0f924a4e9dc5/deploy-status)](https://app.netlify.com/sites/hack-cincinnati/deploys)
 
 [Hack Cincinnati](https://hackcincinnati.io) is the largest high school hackathon in the Midwest.
 
