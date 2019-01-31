@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Hack Cincinnati`,
     description: `Hack Cincinnati is the largest high school hackathon in the Midwest, bringing hundreds of students together for programming and fun!`,
-    author: `@hackcincinnati`
+    author: `@hackcincinnati`,
+    siteUrl: 'https://hackcincinnati.io'
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -42,6 +43,7 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images/`
       }
-    }
+    },
+    `gatsby-plugin-sitemap`
   ]
 }
