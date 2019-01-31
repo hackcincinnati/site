@@ -1,5 +1,6 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle, css } from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
+import { Link } from 'gatsby'
 
 export const breakpoints = {
   mobile: '500px',
@@ -31,30 +32,39 @@ export const Container = styled.div`
   }
 `
 
+const linkStyles = props =>
+  css`
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+    :before {
+      content: '';
+      position: absolute;
+      left: 51%;
+      right: 51%;
+      bottom: 0;
+      background-color: ${props => props.color || colors.primary};
+      height: 4px;
+      transition-property: left, right;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+    :hover:before,
+    :focus:before,
+    :active:before {
+      left: 0;
+      right: 0;
+    }
+  `
+
+export const StyledLink = styled(Link)`
+  ${linkStyles};
+`
+
 export const StyledOutboundLink = styled(OutboundLink)`
-  text-decoration: none;
-  font-weight: bold;
-  color: inherit;
-  position: relative;
-  overflow: hidden;
-  :before {
-    content: '';
-    position: absolute;
-    left: 51%;
-    right: 51%;
-    bottom: 0;
-    background-color: ${props => props.color || colors.primary};
-    height: 4px;
-    transition-property: left, right;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-  }
-  :hover:before,
-  :focus:before,
-  :active:before {
-    left: 0;
-    right: 0;
-  }
+  ${linkStyles};
 `
 
 export const GlobalStyles = createGlobalStyle`
