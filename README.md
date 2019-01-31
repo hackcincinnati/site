@@ -24,4 +24,4 @@
 | [Mingjie Jiang](https://www.linkedin.com/in/itsmingjie/)               | Marketing & Finance        |
 | [Will Mechler](https://www.linkedin.com/in/willmechler/)               | Hacker Experience          |
 | [Mark Senne](https://www.linkedin.com/in/mark-senne-b45807138/)        | Logistics                  |
-| [Annie Wang](https://www.linkedin.com/in/annie-d-wang/)                | Branding & Marketing       |
+| [Annie Wang](https://www.linkedin.com/in/annie-d-wang/)                | Branding & Sponsorship     |

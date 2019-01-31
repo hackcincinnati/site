@@ -88,6 +88,10 @@ function SEO({ keywords, title, path }) {
               {
                 name: `twitter:image:height`,
                 content: `506`
+              },
+              {
+                name: `google-site-verification`,
+                content: `a0roiiuL1J0_ZXDAk5WnoQ_bdntrr_3Xa2sluChntrw`
               }
             ].concat(
               keywords.length > 0

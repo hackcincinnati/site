@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { StaticQuery, graphql } from 'gatsby'
 
-import { Container, breakpoints } from '../components/Theme'
+import { Container, Color, colors, breakpoints } from '../components/Theme'
 import RegisterForm from '../components/RegisterForm'
 
 const FlexContainer = styled.div`
@@ -12,8 +12,7 @@ const FlexContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    margin: 25px 0 75px;
+    margin: 0 0 75px;
   }
 `
 
@@ -45,19 +44,22 @@ export default () => (
       }
     `}
     render={data => (
-      <Container>
-        <FlexContainer>
-          <StyledInfo>
-            <h1>Pre-Register Today!</h1>
-            <p>
-              Sign up to be alerted when registration starts! By pre-registering
-              now you'll guarantee your spot in Hack Cincinnati.
-            </p>
-            <StyledImage fluid={data.image.childImageSharp.fluid} />
-          </StyledInfo>
-          <RegisterForm />
-        </FlexContainer>
-      </Container>
+      <Color color={colors.dark} background={colors.light}>
+        <Container padding="0">
+          <FlexContainer>
+            <StyledInfo>
+              <h1>Pre-Register Today!</h1>
+              <p>
+                Sign up to be alerted when registration starts! By
+                pre-registering now you'll guarantee your spot in Hack
+                Cincinnati.
+              </p>
+              <StyledImage fluid={data.image.childImageSharp.fluid} />
+            </StyledInfo>
+            <RegisterForm />
+          </FlexContainer>
+        </Container>
+      </Color>
     )}
   />
 )

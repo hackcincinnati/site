@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import Register from '../components/Register'
 import Social from '../components/Social'
+import Staff from '../components/Staff'
 import SEO from '../components/SEO'
 
 const IndexPage = () => (
@@ -23,6 +24,7 @@ const IndexPage = () => (
     />
     <Features />
     <Register />
+    <Staff />
     <Social />
   </Layout>
 )

@@ -2,69 +2,110 @@
   "social": {
     "twitter": "https://twitter.com/hackcincinnati",
     "instagram": "https://instagram.com/hackcincinnati",
-    "facebook": "https://www.facebook.com/Hack-Cincinnati-2152997431681748",
+    "facebook": "https://facebook.com/hackcincinnati",
     "email": "mailto:masonhackclub@gmail.com"
   },
-  "features": [
-    "Last year, we ran <a hrefCincyHacks, Cincinnati’s largest high school hackathon. CincyHacks was a massive success —  we had over 80 students present 16 different ideas. This year, we’re kicking it up a notch: we’re bringing in leaders from Hack Camp, Hack Chicago, McDonogh Hacks, and CodeDay to run an event for 300 high school programmers, hackers, and designers.",
-    "As one of those 300 hackers, you’ll work in a team for 24 hours to create your own project — be it an app, game, or website. To help, we’ll provide free food, swag, mentorship, and workshops. At the end of the event, your team will present to a panel of judges for a chance to win some fabulous prizes."
-  ],
-  "directors": [
-    {
-      "name": "Alishaan Ali",
-      "role": "Finance",
-      "image": "alishaan.jpg"
-    },
-    {
-      "name": "Kabir Doshi",
-      "role": "Logistics",
-      "image": "kabir.jpg"
-    },
-    {
-      "name": "Katherine Hu",
-      "role": "Sponsorship",
-      "image": "katherine.jpg"
-    },
-    {
-      "name": "Chris Lee",
-      "role": "Hacker Experience",
-      "image": "chris.jpg"
-    },
-    {
-      "name": "Jack Margeson",
-      "role": "Marketing",
-      "image": "jack.jpg"
-    }
-  ],
 
-  "advisors": [
-    {
-      "name": "Dalton Craven",
-      "image": "dalton.jpg"
+  "directors": {
+    "alishaan": {
+      "name": "Alishaan Ali",
+      "position": "Head of Finance",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/alishaan-ali-645026152"
+      }
     },
-    {
-      "name": "Megan Cui",
-      "image": "megan.jpg"
+    "kabir": {
+      "name": "Kabir Doshi",
+      "position": "Head of Logistics",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/kabirdoshi"
+      }
     },
-    {
-      "name": "Vikram Deepak",
-      "image": "vikram.jpg"
+    "katherine": {
+      "name": "Katherine Hu",
+      "position": "Head of Sponsorship",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/katherine-h-b35593161"
+      }
     },
-    {
-      "name": "Nick Iten",
-      "image": "nick.jpg"
+    "chris": {
+      "name": "Chris Lee",
+      "position": "Head of Experience",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/chris-lee-28569259"
+      }
     },
-    {
-      "name": "Mingjie Jiang",
-      "image": "mingjie.png"
-    },
-    {
-      "name": "Will Mechler",
-      "image": "will.jpg"
-    },
-    {
-      "name": "Mark Senne",
-      "image": "mark.jpg"
+    "jack": {
+      "name": "Jack Margeson",
+      "position": "Head of Marketing",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/jack-margeson"
+      }
     }
-  ]
+  },
+  "advisors": {
+    "dalton": {
+      "name": "Dalton Craven",
+      "position": "Branding & Web Development",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/dalton-craven"
+      }
+    },
+    "megan": {
+      "name": "Megan Cui",
+      "position": "Logistics & Sponsorship",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/megancui"
+      }
+    },
+    "vikram": {
+      "name": "Vikram Deepak",
+      "position": "Hacker Experience",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/vikramdeepak"
+      }
+    },
+    "alan": {
+      "name": "Alan Guo",
+      "position": "Logistics",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/alan-g-32997a13a"
+      }
+    },
+    "nick": {
+      "name": "Nick Iten",
+      "position": "Logistics",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/paul-nicholas-iten-332967168"
+      }
+    },
+    "mingjie": {
+      "name": "Mingjie Jiang",
+      "position": "Marketing & Finance",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/itsmingjie"
+      }
+    },
+    "will": {
+      "name": "Will Mechler",
+      "position": "Logistics & Sponsorship",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/willmechler"
+      }
+    },
+    "mark": {
+      "name": "Mark Senne",
+      "position": "Logistics",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/mark-senne-b45807138"
+      }
+    },
+    "annie": {
+      "name": "Annie Wang",
+      "position": "Branding & Sponsorship",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/annie-d-wang"
+      }
+    }
+  }
 }
