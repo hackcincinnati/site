@@ -28,7 +28,7 @@ export const colors = {
   dark: '#363534',
   primary: '#FC5C00',
   primaryLight: '#FFDBC6',
-  accent: '#0220A5',
+  accent: '#0253F4',
   white: '#FFFFFF'
 }
 
@@ -42,6 +42,7 @@ export const Splash = styled.div`
   width: 100vw;
   background: linear-gradient(0deg, ${colors.primary} 50%, ${colors.accent} 0);
   color: ${colors.white};
+  overflow-x: hidden;
   @media (min-width: ${breakpoints.mobile}) {
     background: linear-gradient(
       -45deg,
