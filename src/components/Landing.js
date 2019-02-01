@@ -43,7 +43,7 @@ const Landing = () => (
       <Info>
         <h3>The Midwest's largest high school hackathon.</h3>
         <h4>
-          July 20<sup>th</sup>&ndash;21<sup>st</sup>
+          July 20<sup>th</sup>&ndash;21<sup>st</sup>, 2019
         </h4>
       </Info>
     </Container>
