@@ -36,7 +36,7 @@ export const staffImage = graphql`
   fragment staffImage on File {
     childImageSharp {
       fixed(width: 110) {
-        ...GatsbyImageSharpFixed_withWebp
+        ...GatsbyImageSharpFixed
       }
     }
   }
