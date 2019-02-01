@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Container } from '../components/Theme'
+import { Container, StyledHeading, colors } from '../components/Theme'
 import Person from '../components/Person'
 import info from '../data'
 
@@ -48,7 +48,9 @@ export default () => (
     `}
     render={data => (
       <Container padding="10px">
-        <h2>Advisors</h2>
+        <StyledHeading color={colors.primary} as="h2">
+          Advisors
+        </StyledHeading>
         <FlexContainer>
           <Person
             details={info.advisors.dalton}

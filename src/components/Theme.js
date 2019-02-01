@@ -4,13 +4,18 @@ import { Link } from 'gatsby'
 import '../../static/fonts/metropolis/stylesheet.css'
 
 export const fonts = {
+  size: '18px',
   heading: {
     name: 'Metropolis',
-    weight: 900
+    weight: 700,
+    lineHeight: '1.5',
+    color: '#363534'
   },
   body: {
     name: 'Metropolis',
-    weight: 'normal'
+    weight: 400,
+    lineHeight: '1.5',
+    color: '#363534'
   }
 }
 
@@ -20,9 +25,10 @@ export const breakpoints = {
 }
 
 export const colors = {
-  primary: '#00AB92',
   dark: '#363534',
-  light: '#E5FCF5',
+  primary: '#FC5C00',
+  primaryLight: '#FFDBC6',
+  accent: '#372F7B',
   white: '#FFFFFF'
 }
 
@@ -30,6 +36,19 @@ export const Color = styled.div`
   width: 100vw;
   background-color: ${props => props.background || colors.primary};
   color: ${props => props.color || colors.white};
+`
+
+export const Splash = styled.div`
+  width: 100vw;
+  background: linear-gradient(0deg, ${colors.primary} 50%, ${colors.accent} 0);
+  color: ${colors.white};
+  @media (min-width: ${breakpoints.mobile}) {
+    background: linear-gradient(
+      -45deg,
+      ${colors.primary} ${props => props.position || '50%'},
+      ${colors.accent} 0
+    );
+  }
 `
 
 export const Container = styled.div`
@@ -42,6 +61,10 @@ export const Container = styled.div`
   @media (min-width: ${breakpoints.mobile}) {
     padding: ${props => props.padding || '50px'} 10px;
   }
+`
+
+export const StyledHeading = styled.h1`
+  color: ${props => props.color || colors.accent};
 `
 
 const linkStyles = props =>
@@ -92,6 +115,7 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     margin: 0;
+    font-size: ${fonts.size};
   }
   article,
   aside,
@@ -314,12 +338,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: ${fonts.heading.name}, sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h2 {
     margin-left: 0;
@@ -330,12 +354,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h3 {
     margin-left: 0;
@@ -346,12 +370,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h4 {
     margin-left: 0;
@@ -362,12 +386,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h5 {
     margin-left: 0;
@@ -378,12 +402,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h6 {
     margin-left: 0;
@@ -394,12 +418,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   hgroup {
     margin-left: 0;
@@ -464,6 +488,7 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   figure {
     margin-left: 0;
@@ -498,7 +523,7 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     font-size: 1rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
     border-collapse: collapse;
     width: 100%;
   }
@@ -620,15 +645,15 @@ export const GlobalStyles = createGlobalStyle`
   }
   code {
     font-size: 0.85rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   kbd {
     font-size: 0.85rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   samp {
     font-size: 0.85rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   abbr {
     border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);

@@ -4,9 +4,10 @@ import { breakpoints, colors } from '../components/Theme'
 
 const StyledForm = styled.form`
   width: 100%;
+  margin: 0;
+  padding: 20px;
   background-color: ${colors.white};
   color: ${colors.dark};
-  padding: 20px;
   border-radius: 10px;
   @media (min-width: ${breakpoints.mobile}) {
     width: 45%;

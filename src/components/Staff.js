@@ -2,12 +2,16 @@ import React from 'react'
 
 import Advisors from '../components/Advisors'
 import Directors from '../components/Directors'
-import { StyledOutboundLink, Container } from '../components/Theme'
+import {
+  StyledOutboundLink,
+  StyledHeading,
+  Container
+} from '../components/Theme'
 
 export default () => (
   <>
     <Container>
-      <h1>Our Team</h1>
+      <StyledHeading>Our Team</StyledHeading>
       <p>
         Last year, we ran{' '}
         <StyledOutboundLink href="https://cincyhacks.com">

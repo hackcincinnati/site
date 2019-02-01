@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { colors } from '../components/Theme'
+
 const Container = styled.li`
   display: flex;
   width: 300px;
@@ -14,6 +16,9 @@ const Info = styled.div`
 
   width: 100%;
   border-radius: 10px;
+  h2 {
+    color: ${colors.primary};
+  }
 `
 
 const QuestionCard = ({ question, answer }) => (

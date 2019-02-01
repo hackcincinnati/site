@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Color, colors, Container } from '../components/Theme'
+import { Color, StyledHeading, colors, Container } from '../components/Theme'
 import Person from '../components/Person'
 import info from '../data'
 
@@ -35,33 +35,33 @@ export default () => (
       }
     `}
     render={data => (
-      <Color color={colors.dark} background={colors.white}>
-        <Container padding="10px">
-          <h2>Directors</h2>
-          <FlexContainer>
-            <Person
-              details={info.directors.alishaan}
-              image={data.alishaan.childImageSharp.fixed}
-            />
-            <Person
-              details={info.directors.kabir}
-              image={data.kabir.childImageSharp.fixed}
-            />
-            <Person
-              details={info.directors.katherine}
-              image={data.katherine.childImageSharp.fixed}
-            />
-            <Person
-              details={info.directors.chris}
-              image={data.chris.childImageSharp.fixed}
-            />
-            <Person
-              details={info.directors.jack}
-              image={data.jack.childImageSharp.fixed}
-            />
-          </FlexContainer>
-        </Container>
-      </Color>
+      <Container padding="10px">
+        <StyledHeading color={colors.primary} as="h2">
+          Directors
+        </StyledHeading>
+        <FlexContainer>
+          <Person
+            details={info.directors.alishaan}
+            image={data.alishaan.childImageSharp.fixed}
+          />
+          <Person
+            details={info.directors.kabir}
+            image={data.kabir.childImageSharp.fixed}
+          />
+          <Person
+            details={info.directors.katherine}
+            image={data.katherine.childImageSharp.fixed}
+          />
+          <Person
+            details={info.directors.chris}
+            image={data.chris.childImageSharp.fixed}
+          />
+          <Person
+            details={info.directors.jack}
+            image={data.jack.childImageSharp.fixed}
+          />
+        </FlexContainer>
+      </Container>
     )}
   />
 )

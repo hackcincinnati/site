@@ -2,16 +2,12 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Container, breakpoints } from '../components/Theme'
+import { Container, breakpoints, colors } from '../components/Theme'
 import Feature from '../components/Feature'
 import info from '../data'
 
 const StyledBackground = styled.div`
   width: 100%;
-  background: #e5fcf5;
-  @media (min-width: ${breakpoints.mobile}) {
-    background: linear-gradient(170deg, #fff 60%, #e5fcf5 0);
-  }
 `
 
 export const fluidImage = graphql`
@@ -40,23 +36,22 @@ export default () => (
       }
     `}
     render={data => (
-      <StyledBackground>
-        <Container>
-          <Feature
-            details={info.features.featureOne}
-            image={data.featureOne.childImageSharp.fluid}
-          />
-          <Feature
-            details={info.features.featureTwo}
-            image={data.featureTwo.childImageSharp.fluid}
-            reversed
-          />
-          <Feature
-            details={info.features.featureThree}
-            image={data.featureThree.childImageSharp.fluid}
-          />
-        </Container>
-      </StyledBackground>
+      <Container>
+        <Feature
+          details={info.features.featureOne}
+          image={data.featureOne.childImageSharp.fluid}
+        />
+        <Feature
+          details={info.features.featureTwo}
+          image={data.featureTwo.childImageSharp.fluid}
+          color={colors.accent}
+          reversed
+        />
+        <Feature
+          details={info.features.featureThree}
+          image={data.featureThree.childImageSharp.fluid}
+        />
+      </Container>
     )}
   />
 )

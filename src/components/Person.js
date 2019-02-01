@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
+import { colors } from '../components/Theme'
+
 const Container = styled.li`
   display: flex;
   width: 170px;
@@ -24,6 +26,7 @@ const Info = styled.div`
   }
   h3 {
     margin-bottom: 10px;
+    color: ${colors.accent};
   }
 `
 

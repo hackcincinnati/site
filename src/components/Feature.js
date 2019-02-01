@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { breakpoints } from '../components/Theme'
+import { breakpoints, colors } from '../components/Theme'
 
 const FlexContainer = styled.div`
   margin: 10px 0;
@@ -31,26 +31,27 @@ const StyledImage = styled(Img)`
 
 const Description = styled.div`
   width: 100%;
-  h3 {
+  h2 {
+    color: ${props => props.color || colors.primary};
     margin-bottom: 0;
     margin-top: 10px;
   }
   @media (min-width: ${breakpoints.mobile}) {
     order: ${props => (props.reversed ? '-1' : '0')};
-    h3 {
+    h2 {
       margin-bottom: inherit;
       margin-top: inherit;
     }
   }
 `
 
-const Feature = ({ details, image, reversed }) => (
+const Feature = ({ details, image, reversed, color }) => (
   <FlexContainer>
     <ImageDiv reversed={reversed}>
       <StyledImage fluid={image} alt="CincyHacks Students" />
     </ImageDiv>
-    <Description reversed={reversed}>
-      <h3>{details.title}</h3>
+    <Description reversed={reversed} color={color}>
+      <h2>{details.title}</h2>
       <p>{details.description}</p>
     </Description>
   </FlexContainer>

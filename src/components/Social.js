@@ -2,15 +2,18 @@ import React from 'react'
 
 import {
   StyledOutboundLink,
+  StyledHeading,
+  Splash,
   Container,
-  Color,
   colors
 } from '../components/Theme'
 
 const Social = () => (
-  <Color>
+  <Splash position="20%">
     <Container>
-      <h3>Want to learn more?</h3>
+      <StyledHeading color={colors.white} as="h3">
+        Want to learn more?
+      </StyledHeading>
       <p>
         Follow us on{' '}
         <StyledOutboundLink
@@ -36,7 +39,7 @@ const Social = () => (
         for more details and pre-registration updates!
       </p>
     </Container>
-  </Color>
+  </Splash>
 )
 
 export default Social
