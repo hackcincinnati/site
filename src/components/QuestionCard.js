@@ -5,7 +5,7 @@ import { colors } from '../components/Theme'
 
 const Container = styled.li`
   display: flex;
-  width: 300px;
+  width: 50%;
   margin: 0;
   padding: 10px;
 `

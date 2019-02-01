@@ -34,13 +34,13 @@ const Description = styled.div`
   h2 {
     color: ${props => props.color || colors.primary};
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 20px;
   }
   @media (min-width: ${breakpoints.mobile}) {
     order: ${props => (props.reversed ? '-1' : '0')};
     h2 {
-      margin-bottom: inherit;
-      margin-top: inherit;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
   }
 `

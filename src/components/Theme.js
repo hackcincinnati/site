@@ -20,7 +20,7 @@ export const fonts = {
 }
 
 export const breakpoints = {
-  mobile: '500px',
+  mobile: '700px',
   desktop: '950px'
 }
 
