@@ -1,6 +1,18 @@
 import styled, { createGlobalStyle, css } from 'styled-components'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { Link } from 'gatsby'
+import '../../static/fonts/metropolis/stylesheet.css'
+
+export const fonts = {
+  heading: {
+    name: 'Metropolis',
+    weight: 900
+  },
+  body: {
+    name: 'Metropolis',
+    weight: 'normal'
+  }
+}
 
 export const breakpoints = {
   mobile: '500px',
@@ -273,8 +285,8 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     color: ${colors.dark};
-    font-family: 'Cabin', sans-serif;
-    font-weight: 400;
+    font-family: '${fonts.body.name}', sans-serif;
+    font-weight: ${fonts.body.weight};
     word-wrap: break-word;
     font-kerning: normal;
     -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -303,8 +315,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: ${fonts.heading.name}, sans-serif;
+    font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
     line-height: 1.1;
@@ -319,8 +331,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: '${fonts.heading.name}', sans-serif;
+    font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
     line-height: 1.1;
@@ -335,8 +347,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: '${fonts.heading.name}', sans-serif;
+    font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
     line-height: 1.1;
@@ -351,8 +363,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: '${fonts.heading.name}', sans-serif;
+    font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1rem;
     line-height: 1.1;
@@ -367,8 +379,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: '${fonts.heading.name}', sans-serif;
+    font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
     line-height: 1.1;
@@ -383,8 +395,8 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     color: inherit;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 900;
+    font-family: '${fonts.heading.name}', sans-serif;
+    font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;
     line-height: 1.1;
