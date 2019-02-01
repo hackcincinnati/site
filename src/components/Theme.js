@@ -28,7 +28,7 @@ export const colors = {
   dark: '#363534',
   primary: '#FC5C00',
   primaryLight: '#FFDBC6',
-  accent: '#372F7B',
+  accent: '#0220A5',
   white: '#FFFFFF'
 }
 
