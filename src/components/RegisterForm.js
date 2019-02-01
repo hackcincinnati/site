@@ -35,65 +35,28 @@ const StyledSubmit = styled.input`
   margin: 4px 2px;
   display: inline-block;
   vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-transition-property: transform;
   transition-property: transform;
   cursor: pointer;
 
   :hover,
   :focus,
   :active {
-    -webkit-transform: scale(1.1);
     transform: scale(1.1);
   }
 `
 
 const RegisterForm = () => (
   <StyledForm name="preregister" method="POST" netlify data-netlify="true">
-    <h3>Pre-Registration</h3>
+    <h3>Pre-Registration Form</h3>
     <input type="hidden" name="form-name" value="preregister" />
-    <label htmlFor="fname">First Name: </label>
-    <StyledInput type="text" name="fname" autocomplete="given-name" required />
-    <br />
-    <label htmlFor="lname">Last Name: </label>
-    <StyledInput type="text" name="lname" autocomplete="family-name" required />
+    <label htmlFor="name">Name: </label>
+    <StyledInput type="text" name="name" autocomplete="name" required />
     <br />
     <label htmlFor="email">Email: </label>
     <StyledInput type="email" name="email" autocomplete="email" required />
-    <br />
-    <label htmlFor="school">School: </label>
-    <StyledInput type="text" name="school" required />
-    <br />
-    <label htmlFor="city">City: </label>
-    <StyledInput
-      type="text"
-      name="city"
-      autocomplete="address-level2"
-      required
-    />
-    <br />
-    <label htmlFor="state">State: </label>
-    <StyledInput
-      type="text"
-      name="state"
-      autocomplete="address-level1"
-      required
-    />
-    <br />
-    <label htmlFor="zip">ZIP Code: </label>
-    <StyledInput type="text" name="zip" autocomplete="postal-code" required />
-    <br />
-    <label htmlFor="role">I am a: </label>
-    <StyledSelect name="role" required>
-      <option value="student">Student</option>
-      <option value="student">Parent</option>
-      <option value="teacher">Teacher</option>
-      <option value="other">Other</option>
-    </StyledSelect>
     <br />
     <StyledSubmit type="submit" text="Submit" />
   </StyledForm>
