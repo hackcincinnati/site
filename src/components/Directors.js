@@ -42,23 +42,23 @@ export default () => (
         <FlexContainer>
           <Person
             details={info.directors.alishaan}
-            image={data.alishaan.childImageSharp.fixed}
+            image={data.alishaan.childImageSharp.fluid}
           />
           <Person
             details={info.directors.kabir}
-            image={data.kabir.childImageSharp.fixed}
+            image={data.kabir.childImageSharp.fluid}
           />
           <Person
             details={info.directors.katherine}
-            image={data.katherine.childImageSharp.fixed}
+            image={data.katherine.childImageSharp.fluid}
           />
           <Person
             details={info.directors.chris}
-            image={data.chris.childImageSharp.fixed}
+            image={data.chris.childImageSharp.fluid}
           />
           <Person
             details={info.directors.jack}
-            image={data.jack.childImageSharp.fixed}
+            image={data.jack.childImageSharp.fluid}
           />
         </FlexContainer>
       </Container>

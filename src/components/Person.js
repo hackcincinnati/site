@@ -33,13 +33,14 @@ const Info = styled.div`
 const StyledImage = styled(Img)`
   border-radius: 50%;
   margin: 0 auto 10px;
+  width: 110px;
 `
 
 export const staffImage = graphql`
   fragment staffImage on File {
     childImageSharp {
-      fixed(width: 110) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
@@ -53,7 +54,7 @@ const Person = ({ details, image }) => (
         rel="noopener noreferrer"
         href={details.social.linkedin}
       >
-        <StyledImage fixed={image} alt={details.name} />
+        <StyledImage fluid={image} alt={details.name} />
       </OutboundLink>
       <h3>{details.name}</h3>
       <p>{details.position}</p>
