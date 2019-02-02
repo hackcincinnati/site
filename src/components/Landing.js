@@ -50,9 +50,9 @@ const StyledLogo = styled.img`
 `
 
 const Landing = () => (
-  <Splash position="20%">
+  <Splash>
     <Container>
-      <StyledLogo src={logo} />
+      <StyledLogo src={logo} alt="Hack Cincinnati's Official Logo" />
       <Info>
         <h1>The Midwest's largest high school hackathon.</h1>
         <p>

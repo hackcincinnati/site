@@ -14,7 +14,7 @@ const Container = styled.div`
 `
 
 const Footer = () => (
-  <Color background={colors.dark}>
+  <Color background={colors.dark} color={colors.white}>
     <Container>
       Web by{' '}
       <StyledOutboundLink href="https://daltoncraven.me">

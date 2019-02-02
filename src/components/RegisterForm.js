@@ -1,16 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
-import { breakpoints, colors } from '../components/Theme'
+import {
+  StyledOutboundLink,
+  Color,
+  breakpoints,
+  colors
+} from '../components/Theme'
 
-const StyledForm = styled.form`
+const StyledColor = styled(Color)`
   width: 100%;
   margin: 0;
   padding: 20px;
-  background-color: ${colors.white};
-  color: ${colors.dark};
   border-radius: 10px;
   @media (min-width: ${breakpoints.mobile}) {
     width: 45%;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  form {
+    margin-bottom: 0;
   }
 `
 
@@ -19,6 +31,7 @@ const StyledInput = styled.input`
   padding: 6px 12px;
   margin: 8px 0;
   box-sizing: border-box;
+  display: block;
 `
 
 const StyledSelect = styled.select`
@@ -28,7 +41,7 @@ const StyledSelect = styled.select`
 
 const StyledSubmit = styled.input`
   margin: 8px 0;
-  background-color: ${colors.primary};
+  background-color: ${colors.accent};
   border: none;
   color: ${colors.white};
   padding: 16px 32px;
@@ -50,17 +63,38 @@ const StyledSubmit = styled.input`
 `
 
 const RegisterForm = () => (
-  <StyledForm name="preregister" method="POST" netlify data-netlify="true">
-    <h3>Pre-Registration Form</h3>
-    <input type="hidden" name="form-name" value="preregister" />
-    <label htmlFor="name">Name: </label>
-    <StyledInput type="text" name="name" autocomplete="name" required />
-    <br />
-    <label htmlFor="email">Email: </label>
-    <StyledInput type="email" name="email" autocomplete="email" required />
-    <br />
-    <StyledSubmit type="submit" text="Submit" />
-  </StyledForm>
+  <StyledColor color={colors.dark} background={colors.white}>
+    <h3>Student Pre-Registration</h3>
+    <p>
+      <small>
+        Are you a parent, teacher, or mentor? Please{' '}
+        <StyledOutboundLink href="mailto:team@hackcincinnati.io">
+          contact
+        </StyledOutboundLink>{' '}
+        to us to learn how you can get involved, too!
+      </small>
+    </p>
+    <form name="preregister" action="/" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="preregister" />
+      <label htmlFor="name">Name: </label>
+      <StyledInput
+        type="text"
+        name="name"
+        id="name"
+        autocomplete="name"
+        required
+      />
+      <label htmlFor="email">Email: </label>
+      <StyledInput
+        type="email"
+        name="email"
+        id="email"
+        autocomplete="email"
+        required
+      />
+      <StyledSubmit type="submit" text="Submit" />
+    </form>
+  </StyledColor>
 )
 
 export default RegisterForm

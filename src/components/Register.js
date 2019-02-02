@@ -25,7 +25,7 @@ const StyledInfo = styled.div`
 `
 
 export default () => (
-  <Splash>
+  <Splash position="50%">
     <Container>
       <FlexContainer>
         <StyledInfo>

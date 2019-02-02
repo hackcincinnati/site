@@ -27,26 +27,29 @@ export const breakpoints = {
 export const colors = {
   dark: '#363534',
   primary: '#FC5C00',
-  primaryLight: '#FFDBC6',
   accent: '#0253F4',
+  primaryLight: '#F6F9FE',
   white: '#FFFFFF'
 }
 
 export const Color = styled.div`
-  width: 100vw;
-  background-color: ${props => props.background || colors.primary};
-  color: ${props => props.color || colors.white};
+  width: 100%;
+  background-color: ${props => props.background || colors.primaryLight};
+  color: ${props => props.color || colors.dark};
 `
 
 export const Splash = styled.div`
-  width: 100vw;
-  background: linear-gradient(0deg, ${colors.primary} 50%, ${colors.accent} 0);
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    ${colors.primary} ${props => props.mobilePosition || '50%'},
+    ${colors.accent} 0
+  );
   color: ${colors.white};
-  overflow-x: hidden;
   @media (min-width: ${breakpoints.mobile}) {
     background: linear-gradient(
       -45deg,
-      ${colors.primary} ${props => props.position || '50%'},
+      ${colors.primary} ${props => props.position || '20%'},
       ${colors.accent} 0
     );
   }
@@ -116,7 +119,6 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     margin: 0;
-    font-size: ${fonts.size};
   }
   article,
   aside,
@@ -310,10 +312,12 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     color: ${colors.dark};
+    background-color: ${colors.white};
     font-family: '${fonts.body.name}', sans-serif;
     font-weight: ${fonts.body.weight};
     word-wrap: break-word;
     font-kerning: normal;
+    font-size: ${fonts.size};
     -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';

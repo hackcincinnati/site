@@ -24,12 +24,16 @@ export default () => (
         answer="At the minimum, you'll need a student ID, laptop, and charger. We also recommend bringing a change of clothes, toiletries, and a sleeping bag or pillow. You won't be able to leave Hack Cincinnati after the event starts, so make sure you have any medications you'll need."
       />
       <QuestionCard
-        question="Do I need to know how to code?"
-        answer="Hack Cincinnati is open to all skill levels – both beginner and veteran coders may attend."
+        question="Who can come to Hack Cincinnati?"
+        answer="Any current high school is welcome to come to Hack Cincinnati &mdash; all we ask is that you bring a school issued ID with you. Additionally, teachers and parents are welcome to come to the final awards ceremony."
       />
       <QuestionCard
-        question="Who can come to Hack Cincinnati?"
-        answer="Any current high school is welcome to come to Hack Cincinnati – all we ask is that you bring a school issued ID with you. Additionally, teachers and parents are welcome to come to the final awards ceremony."
+        question="How long is Hack Cincinnati?"
+        answer="You will have 24 hours to work on your projects at Hack Cincinnati. We will also have activities before and after the block of coding, so expect to be there from Saturday afternoon to Sunday evening."
+      />
+      <QuestionCard
+        question="Do I need to know how to code?"
+        answer="Hack Cincinnati is open to all skill levels &mdash; both beginner and veteran coders may attend."
       />
       <QuestionCard
         question="Is Hack Cincinnati free?"
@@ -39,17 +43,13 @@ export default () => (
         question="Is there a code of conduct?"
         answer={
           <Fragment>
-            Yes. Please carefully read our Code of Conduct{' '}
+            Yes. Please read our{' '}
             <StyledOutboundLink href="https://github.com/hackcincinnati/site/blob/master/CODE_OF_CONDUCT.md">
-              here
+              Code of Conduct
             </StyledOutboundLink>{' '}
-            prior to attending.
+            carefully prior to attending.
           </Fragment>
         }
-      />
-      <QuestionCard
-        question="How long is Hack Cincinnati?"
-        answer="You will have 24 hours to work on your projects at Hack Cincinnati. We will also have activities before and after the block of coding, so expect to be there from Saturday afternoon to Sunday evening."
       />
     </FlexContainer>
   </Container>
