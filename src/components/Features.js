@@ -77,9 +77,7 @@ export default () => (
           />
           <h1 style={{ textAlign: 'center' }}>
             Welcome to the{' '}
-            <ColorSpan color={colors.primary}>Hackathon</ColorSpan>
-            <br />
-            &mdash;
+            <ColorSpan color={colors.primary}>Hackathon</ColorSpan>:
             <br />
             Welcome to{' '}
             <ColorSpan colors={colors.accent}>Hack Cincinnati</ColorSpan>
