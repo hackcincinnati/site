@@ -26,8 +26,8 @@ export const breakpoints = {
 
 export const colors = {
   dark: '#363534',
-  primary: '#FC5C00',
-  accent: '#0253F4',
+  primary: '#ec6c45', // #Ec6C45
+  accent: '#00C1ED',
   primaryLight: '#F6F9FE',
   white: '#FFFFFF'
 }
@@ -42,15 +42,15 @@ export const Splash = styled.div`
   width: 100%;
   background: linear-gradient(
     0deg,
-    ${colors.primary} ${props => props.mobilePosition || '50%'},
-    ${colors.accent} 0
+    ${colors.accent} ${props => props.mobilePosition || '50%'},
+    ${colors.primary} 0
   );
   color: ${colors.white};
   @media (min-width: ${breakpoints.mobile}) {
     background: linear-gradient(
       -45deg,
-      ${colors.primary} ${props => props.position || '20%'},
-      ${colors.accent} 0
+      ${colors.accent} ${props => props.position || '20%'},
+      ${colors.primary} 0
     );
   }
 `
@@ -84,7 +84,7 @@ const linkStyles = props =>
       left: 51%;
       right: 51%;
       bottom: 0;
-      background-color: ${props => props.color || colors.primary};
+      background-color: ${props => props.color || colors.accent};
       height: 4px;
       transition-property: left, right;
       transition-duration: 0.3s;

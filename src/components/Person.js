@@ -26,7 +26,7 @@ const Info = styled.div`
   }
   h3 {
     margin-bottom: 10px;
-    color: ${colors.accent};
+    color: ${colors.primary};
   }
 `
 

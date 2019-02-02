@@ -36,7 +36,7 @@ export default () => (
     `}
     render={data => (
       <Container padding="10px">
-        <StyledHeading color={colors.primary} as="h2">
+        <StyledHeading color={colors.accent} as="h2">
           Directors
         </StyledHeading>
         <FlexContainer>
