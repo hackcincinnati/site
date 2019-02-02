@@ -54,7 +54,7 @@ const Landing = () => (
     <Container>
       <StyledLogo src={logo} alt="Hack Cincinnati's Official Logo" />
       <Info>
-        <h1>The Midwest's largest high school hackathon.</h1>
+        <h1>The Midwest’s largest high school hackathon.</h1>
         <p>
           July 20<sup>th</sup>&ndash;21<sup>st</sup>, 2019
         </p>

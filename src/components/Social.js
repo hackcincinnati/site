@@ -2,7 +2,7 @@ import React from 'react'
 
 import {
   StyledOutboundLink,
-  StyledHeading,
+  ColorSpan,
   Splash,
   Container,
   colors
@@ -11,9 +11,9 @@ import {
 const Social = () => (
   <Splash>
     <Container>
-      <StyledHeading color={colors.white} as="h3">
-        Want to learn more?
-      </StyledHeading>
+      <h3>
+        <ColorSpan color={colors.white}>Want to learn more?</ColorSpan>
+      </h3>
       <p>
         Follow us on{' '}
         <StyledOutboundLink href="https://facebook.com/hackcincinnati">

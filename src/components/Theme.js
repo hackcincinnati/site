@@ -67,7 +67,7 @@ export const Container = styled.div`
   }
 `
 
-export const StyledHeading = styled.h1`
+export const ColorSpan = styled.span`
   color: ${props => props.color || colors.accent};
 `
 

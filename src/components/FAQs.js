@@ -1,11 +1,7 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
-import {
-  Container,
-  StyledOutboundLink,
-  StyledHeading
-} from '../components/Theme'
+import { Container, StyledOutboundLink, ColorSpan } from '../components/Theme'
 import QuestionCard from '../components/QuestionCard'
 
 export const FlexContainer = styled.ul`
@@ -17,7 +13,9 @@ export const FlexContainer = styled.ul`
 
 export default () => (
   <Container padding="10px">
-    <StyledHeading>FAQs</StyledHeading>
+    <h1>
+      <ColorSpan>FAQs</ColorSpan>
+    </h1>
     <FlexContainer>
       <QuestionCard
         question="What should I bring?"

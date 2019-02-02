@@ -31,11 +31,6 @@ const StyledImage = styled(Img)`
 
 const Description = styled.div`
   width: 100%;
-  h2 {
-    color: ${props => props.color || colors.primary};
-    margin-bottom: 0;
-    margin-top: 20px;
-  }
   @media (min-width: ${breakpoints.mobile}) {
     order: ${props => (props.reversed ? '-1' : '0')};
     h2 {
@@ -45,14 +40,14 @@ const Description = styled.div`
   }
 `
 
-const Feature = ({ details, image, reversed, color }) => (
+const Feature = ({ title, details, image, reversed, color }) => (
   <FlexContainer>
     <ImageDiv reversed={reversed}>
       <StyledImage fluid={image} alt="CincyHacks Students" />
     </ImageDiv>
-    <Description reversed={reversed} color={color}>
-      <h2>{details.title}</h2>
-      <p>{details.description}</p>
+    <Description reversed={reversed}>
+      <h2>{title}</h2>
+      <p>{details}</p>
     </Description>
   </FlexContainer>
 )

@@ -5,20 +5,6 @@
     "facebook": "https://facebook.com/hackcincinnati",
     "email": "mailto:masonhackclub@gmail.com"
   },
-  "features": {
-    "featureOne": {
-      "title": "About Us",
-      "description": "Hack Cincinnati was born out of a mission to uncover the passion for computer science in the Midwest. We’re carrying on the mission started by Hack Chicago last year. We believe that that attending a hackathon is one of the most valuable experiences a high school programmer can have."
-    },
-    "featureTwo": {
-      "title": "What You'll Do",
-      "description": "As one of 300 hackers, you’ll work in a team for 24 hours to create your own project — be it an app, game, or website. To help, we’ll provide free food, swag, mentorship, and workshops. At the end of the event, your team will present to a panel of judges for a chance to win some fabulous prizes."
-    },
-    "featureThree": {
-      "title": "Why Hack Cincinnati?",
-      "description": "Hack Cincinnati aims to be inclusive to all skill levels. As a beginner, you could attend one of the workshops designed to jump-start your project. If you’re a veteran hacker, we’ll provide personalized mentorship to help refine your skills. We also have numerous non-coding events planned to give your mind (and fingers!) a much-needed break."
-    }
-  },
   "directors": {
     "alishaan": {
       "name": "Alishaan Ali",
@@ -120,15 +106,5 @@
         "linkedin": "https://www.linkedin.com/in/annie-d-wang"
       }
     }
-  },
-  "faq": [
-    {
-      "title": "What is a hackathon?",
-      "details": "Details"
-    },
-    {
-      "title": "What is a hackathon?",
-      "details": "Details"
-    }
-  ]
+  }
 }

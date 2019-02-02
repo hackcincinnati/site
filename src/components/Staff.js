@@ -4,7 +4,7 @@ import Advisors from '../components/Advisors'
 import Directors from '../components/Directors'
 import {
   StyledOutboundLink,
-  StyledHeading,
+  ColorSpan,
   Container,
   Splash,
   Color,
@@ -15,7 +15,9 @@ export default () => (
   <>
     <Splash>
       <Container>
-        <StyledHeading color={colors.white}>Our Team</StyledHeading>
+        <h2>
+          <ColorSpan color={colors.white}>Our Team</ColorSpan>
+        </h2>
         <p>
           Last year, we ran{' '}
           <StyledOutboundLink href="https://cincyhacks.com">
