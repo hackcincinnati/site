@@ -76,9 +76,12 @@ export const FlexContainer = styled.ul`
 
 export const FlexItem = styled.li`
   display: flex;
-  width: ${props => props.width || '50%'};
+  width: ${props => props.mobileWidth || '100%'};
   margin: 0;
   padding: 10px;
+  @media (min-width: ${breakpoints.mobile}) {
+    width: ${props => props.width || '50%'};
+  }
 `
 
 export const FlexContent = styled.div`

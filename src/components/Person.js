@@ -4,15 +4,11 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-import { FlexItem, colors } from '../components/Theme'
+import { FlexItem, FlexContent, colors } from '../components/Theme'
 
-const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  border-radius: 10px;
+const StyledFlexContent = styled(FlexContent)`
   text-align: center;
+
   p {
     font-size: 0.85em;
     line-height: 1em;
@@ -41,7 +37,7 @@ export const staffImage = graphql`
 
 const Person = ({ details, image }) => (
   <FlexItem width="170px" mobileWidth="50%">
-    <Info>
+    <StyledFlexContent>
       <OutboundLink
         target="_blank"
         rel="noopener noreferrer"
@@ -51,7 +47,7 @@ const Person = ({ details, image }) => (
       </OutboundLink>
       <h3>{details.name}</h3>
       <p>{details.position}</p>
-    </Info>
+    </StyledFlexContent>
   </FlexItem>
 )
 export default Person
