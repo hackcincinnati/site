@@ -67,6 +67,31 @@ export const Container = styled.div`
   }
 `
 
+export const FlexContainer = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+`
+
+export const FlexItem = styled.li`
+  display: flex;
+  width: ${props => props.width || '50%'};
+  margin: 0;
+  padding: 10px;
+`
+
+export const FlexContent = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  border-radius: 10px;
+  padding: ${props => props.padding};
+  color: ${props => props.color};
+  background-color: ${props => props.backgroundColor};
+`
+
 export const ColorSpan = styled.span`
   color: ${props => props.color || colors.accent};
 `

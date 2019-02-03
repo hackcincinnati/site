@@ -1,15 +1,13 @@
 import React, { Fragment } from 'react'
 import styled from 'styled-components'
 
-import { Container, StyledOutboundLink, ColorSpan } from '../components/Theme'
+import {
+  Container,
+  FlexContainer,
+  StyledOutboundLink,
+  ColorSpan
+} from '../components/Theme'
 import QuestionCard from '../components/QuestionCard'
-
-export const FlexContainer = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-`
 
 export default () => (
   <Container padding="10px">
