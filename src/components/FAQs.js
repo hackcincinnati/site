@@ -10,8 +10,8 @@ import {
 import QuestionCard from '../components/QuestionCard'
 
 export default () => (
-  <Container padding="10px">
-    <h1>
+  <Container>
+    <h1 style={{ marginLeft: 10 }}>
       <ColorSpan>FAQs</ColorSpan>
     </h1>
     <FlexContainer>

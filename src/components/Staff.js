@@ -15,9 +15,9 @@ export default () => (
   <>
     <Splash>
       <Container>
-        <h2>
+        <h1>
           <ColorSpan color={colors.white}>Our Team</ColorSpan>
-        </h2>
+        </h1>
         <p>
           Last year, we ran{' '}
           <StyledOutboundLink href="https://cincyhacks.com">

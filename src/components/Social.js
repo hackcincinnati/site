@@ -11,9 +11,9 @@ import {
 const Social = () => (
   <Splash>
     <Container>
-      <h3>
+      <h1>
         <ColorSpan color={colors.white}>Want to learn more?</ColorSpan>
-      </h3>
+      </h1>
       <p>
         Follow us on{' '}
         <StyledOutboundLink href="https://facebook.com/hackcincinnati">
