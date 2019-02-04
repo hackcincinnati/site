@@ -27,7 +27,7 @@ export const breakpoints = {
 export const colors = {
   dark: '#363534',
   primary: '#ec6c45', // #Ec6C45
-  accent: '#00C1ED',
+  accent: '#00A0C4',
   primaryLight: '#F6F9FE',
   white: '#FFFFFF'
 }
