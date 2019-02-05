@@ -35,7 +35,7 @@ export default () => (
       }
     `}
     render={data => (
-      <Container padding="10px">
+      <Container>
         <h2>
           <ColorSpan color={colors.accent}>Directors</ColorSpan>
         </h2>

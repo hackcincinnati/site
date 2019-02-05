@@ -64,6 +64,8 @@ export const Container = styled.div`
   }
   @media (min-width: ${breakpoints.mobile}) {
     padding: ${props => props.padding || '50px'} 10px;
+    padding-top: ${props => props.paddingTop};
+    padding-bottom: ${props => props.paddingBottom};
   }
 `
 
