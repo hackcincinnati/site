@@ -16,7 +16,7 @@ export const Color = styled.div`
 `
 
 const Container = styled.div`
-  padding: 10px;
+  padding: 20px 10px;
   width: 100%;
   max-width: 700px;
   margin: 0 auto;
@@ -44,6 +44,7 @@ const Info = styled.div`
 const StyledLogo = styled.img`
   width: 100%;
   max-width: 200px;
+  margin: 0;
 `
 
 const Landing = () => (
