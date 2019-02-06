@@ -14,14 +14,17 @@ const Container = styled.div`
 `
 
 const Footer = () => (
-  <Color background={colors.dark}>
+  <Color background={colors.dark} color={colors.white}>
     <Container>
       Web by{' '}
-      <StyledOutboundLink href="https://daltoncraven.me">
+      <StyledOutboundLink color={colors.primary} href="https://daltoncraven.me">
         Dalton Craven
       </StyledOutboundLink>{' '}
       &#47;&#47; View Source on{' '}
-      <StyledOutboundLink href="https://github.com/hackcincinnati/site">
+      <StyledOutboundLink
+        color={colors.primary}
+        href="https://github.com/hackcincinnati/site"
+      >
         GitHub
       </StyledOutboundLink>
     </Container>

@@ -4,44 +4,97 @@ import { Link } from 'gatsby'
 import '../../static/fonts/metropolis/stylesheet.css'
 
 export const fonts = {
+  size: '18px',
   heading: {
     name: 'Metropolis',
-    weight: 900
+    weight: 700,
+    lineHeight: '1.5',
+    color: '#363534'
   },
   body: {
     name: 'Metropolis',
-    weight: 'normal'
+    weight: 400,
+    lineHeight: '1.5',
+    color: '#363534'
   }
 }
 
 export const breakpoints = {
-  mobile: '500px',
+  mobile: '700px',
   desktop: '950px'
 }
 
 export const colors = {
-  primary: '#00AB92',
   dark: '#363534',
-  light: '#E5FCF5',
+  primary: '#ec6c45', // #Ec6C45
+  accent: '#00A0C4',
+  primaryLight: '#F6F9FE',
   white: '#FFFFFF'
 }
 
 export const Color = styled.div`
-  width: 100vw;
-  background-color: ${props => props.background || colors.primary};
-  color: ${props => props.color || colors.white};
+  width: 100%;
+  background-color: ${props => props.background || colors.primaryLight};
+  color: ${props => props.color || colors.dark};
+`
+
+export const Splash = styled.div`
+  width: 100%;
+  background: ${props => props.mobileColor || colors.primary};
+  color: ${colors.white};
+  @media (min-width: ${breakpoints.mobile}) {
+    background: linear-gradient(
+      -45deg,
+      ${colors.accent} ${props => props.position || '20%'},
+      ${colors.primary} 0
+    );
+  }
 `
 
 export const Container = styled.div`
   margin: 0 auto;
-  max-width: ${breakpoints.desktop};
+  max-width: ${props => props.maxWidth || breakpoints.desktop};
   padding: 20px 10px;
   p {
     margin: 0;
   }
   @media (min-width: ${breakpoints.mobile}) {
     padding: ${props => props.padding || '50px'} 10px;
+    padding-top: ${props => props.paddingTop};
+    padding-bottom: ${props => props.paddingBottom};
   }
+`
+
+export const FlexContainer = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+`
+
+export const FlexItem = styled.li`
+  display: flex;
+  width: ${props => props.mobileWidth || '100%'};
+  margin: 0;
+  padding: 10px;
+  @media (min-width: ${breakpoints.mobile}) {
+    width: ${props => props.width || '50%'};
+  }
+`
+
+export const FlexContent = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  border-radius: 10px;
+  padding: ${props => props.padding};
+  color: ${props => props.color};
+  background-color: ${props => props.backgroundColor};
+`
+
+export const ColorSpan = styled.span`
+  color: ${props => props.color || colors.accent};
 `
 
 const linkStyles = props =>
@@ -57,7 +110,7 @@ const linkStyles = props =>
       left: 51%;
       right: 51%;
       bottom: 0;
-      background-color: ${props => props.color || colors.primary};
+      background-color: ${props => props.color || colors.accent};
       height: 4px;
       transition-property: left, right;
       transition-duration: 0.3s;
@@ -285,10 +338,12 @@ export const GlobalStyles = createGlobalStyle`
   }
   body {
     color: ${colors.dark};
+    background-color: ${colors.white};
     font-family: '${fonts.body.name}', sans-serif;
     font-weight: ${fonts.body.weight};
     word-wrap: break-word;
     font-kerning: normal;
+    font-size: ${fonts.size};
     -moz-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -ms-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
     -webkit-font-feature-settings: 'kern', 'liga', 'clig', 'calt';
@@ -314,12 +369,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: ${fonts.heading.name}, sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 2.25rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h2 {
     margin-left: 0;
@@ -330,12 +385,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1.62671rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h3 {
     margin-left: 0;
@@ -346,12 +401,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1.38316rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h4 {
     margin-left: 0;
@@ -362,12 +417,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 1rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h5 {
     margin-left: 0;
@@ -378,12 +433,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 0.85028rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   h6 {
     margin-left: 0;
@@ -394,12 +449,12 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
-    color: inherit;
+    color: ${fonts.heading.color};
     font-family: '${fonts.heading.name}', sans-serif;
     font-weight: ${fonts.heading.weight};
     text-rendering: optimizeLegibility;
     font-size: 0.78405rem;
-    line-height: 1.1;
+    line-height: ${fonts.heading.lineHeight};
   }
   hgroup {
     margin-left: 0;
@@ -464,6 +519,7 @@ export const GlobalStyles = createGlobalStyle`
     padding-right: 0;
     padding-top: 0;
     margin-bottom: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   figure {
     margin-left: 0;
@@ -498,7 +554,7 @@ export const GlobalStyles = createGlobalStyle`
     padding-top: 0;
     margin-bottom: 1.45rem;
     font-size: 1rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
     border-collapse: collapse;
     width: 100%;
   }
@@ -620,15 +676,15 @@ export const GlobalStyles = createGlobalStyle`
   }
   code {
     font-size: 0.85rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   kbd {
     font-size: 0.85rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   samp {
     font-size: 0.85rem;
-    line-height: 1.45rem;
+    line-height: ${fonts.body.lineHeight};
   }
   abbr {
     border-bottom: 1px dotted hsla(0, 0%, 0%, 0.5);

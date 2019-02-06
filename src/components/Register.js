@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Container, Color, colors, breakpoints } from '../components/Theme'
+import { Container, Splash, colors, breakpoints } from '../components/Theme'
 import RegisterForm from '../components/RegisterForm'
 
 const FlexContainer = styled.div`
@@ -11,7 +11,6 @@ const FlexContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin: 0 0 75px;
   }
 `
 
@@ -20,11 +19,14 @@ const StyledInfo = styled.div`
   @media (min-width: ${breakpoints.mobile}) {
     width: 45%;
   }
+  h1 {
+    color: ${colors.white};
+  }
 `
 
 export default () => (
-      <Color color={colors.dark} background={colors.light}>
-    <Container padding="0">
+  <Splash position="50%">
+    <Container>
       <FlexContainer>
         <StyledInfo>
           <h1>Pre-Register Today!</h1>
@@ -36,5 +38,5 @@ export default () => (
         <RegisterForm />
       </FlexContainer>
     </Container>
-  </Color>
+  </Splash>
 )

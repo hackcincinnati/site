@@ -4,57 +4,52 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-const Container = styled.li`
-  display: flex;
-  width: 170px;
-  margin: 0;
-  padding: 10px;
-`
+import { FlexItem, FlexContent, colors } from '../components/Theme'
 
-const Info = styled.div`
-  display: flex;
-  flex-direction: column;
-
-  width: 100%;
-  border-radius: 10px;
+const StyledFlexContent = styled(FlexContent)`
   text-align: center;
+
   p {
     font-size: 0.85em;
     line-height: 1em;
   }
   h3 {
-    margin-bottom: 10px;
+    margin: 5px 0;
+    color: ${colors.primary};
+    line-height: 1.2em;
+    word-spacing: 500px;
   }
 `
 
 const StyledImage = styled(Img)`
   border-radius: 50%;
   margin: 0 auto 10px;
+  width: 110px;
 `
 
 export const staffImage = graphql`
   fragment staffImage on File {
     childImageSharp {
-      fixed(width: 110) {
-        ...GatsbyImageSharpFixed
+      fluid(maxWidth: 400) {
+        ...GatsbyImageSharpFluid
       }
     }
   }
 `
 
 const Person = ({ details, image }) => (
-  <Container>
-    <Info>
+  <FlexItem width="170px" mobileWidth="50%">
+    <StyledFlexContent>
       <OutboundLink
         target="_blank"
         rel="noopener noreferrer"
         href={details.social.linkedin}
       >
-        <StyledImage fixed={image} alt={details.name} />
+        <StyledImage fluid={image} alt={details.name} />
       </OutboundLink>
       <h3>{details.name}</h3>
       <p>{details.position}</p>
-    </Info>
-  </Container>
+    </StyledFlexContent>
+  </FlexItem>
 )
 export default Person
