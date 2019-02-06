@@ -1,18 +1,14 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import Landing from '../components/Landing'
-import Features from '../components/Features'
+import Header from '../components/Header'
 import Register from '../components/Register'
-import Social from '../components/Social'
-import Staff from '../components/Staff'
-import FAQs from '../components/FAQs'
 import SEO from '../components/SEO'
 
-const IndexPage = () => (
+const RegisterPage = () => (
   <Layout>
     <SEO
-      title="Home"
+      title="Register"
       keywords={[
         `hack`,
         `cincinnati`,
@@ -24,13 +20,9 @@ const IndexPage = () => (
         `computer science`
       ]}
     />
-    <Landing />
-    <Features />
+    <Header />
     <Register />
-    <FAQs />
-    <Staff />
-    <Social />
   </Layout>
 )
 
-export default IndexPage
+export default RegisterPage
