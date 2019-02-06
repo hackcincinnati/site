@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Img from 'gatsby-image'
-import { breakpoints, colors } from '../components/Theme'
+import { breakpoints } from '../components/Theme'
 
 const FlexContainer = styled.div`
   margin: 10px 0;

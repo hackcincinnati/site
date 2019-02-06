@@ -34,11 +34,6 @@ const StyledInput = styled.input`
   display: block;
 `
 
-const StyledSelect = styled.select`
-  margin: 8px 0;
-  padding: 16px 20px;
-`
-
 const StyledSubmit = styled.input`
   margin: 8px 0;
   background-color: ${colors.accent};

@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { Color, ColorSpan, colors, Container } from '../components/Theme'
+import { ColorSpan, colors, Container } from '../components/Theme'
 import Person from '../components/Person'
 import info from '../data'
 

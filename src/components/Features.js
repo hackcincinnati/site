@@ -1,28 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 
-import {
-  Container,
-  ColorSpan,
-  Splash,
-  breakpoints,
-  colors
-} from '../components/Theme'
+import { Container, ColorSpan, colors } from '../components/Theme'
 import Feature from '../components/Feature'
-import info from '../data'
-
-const StyledBackground = styled.div`
-  width: 100%;
-`
-
-const CenterText = styled.div`
-  text-align: center;
-`
-
-const ThinText = styled.span`
-  font-weight: 100;
-`
 
 export const fluidImage = graphql`
   fragment fluidImage on File {

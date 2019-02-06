@@ -7,7 +7,6 @@ import {
   ColorSpan,
   Container,
   Splash,
-  Color,
   colors
 } from '../components/Theme'
 
