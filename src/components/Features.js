@@ -16,6 +16,14 @@ const StyledBackground = styled.div`
   width: 100%;
 `
 
+const CenterText = styled.div`
+  text-align: center;
+`
+
+const ThinText = styled.span`
+  font-weight: 100;
+`
+
 export const fluidImage = graphql`
   fragment fluidImage on File {
     childImageSharp {
@@ -47,7 +55,7 @@ export default () => (
           <Feature
             title={
               <React.Fragment>
-                A Hackathon is a place to{' '}
+                A hackathon is a place to{' '}
                 <ColorSpan color={colors.primary}>create</ColorSpan>.
               </React.Fragment>
             }
@@ -57,7 +65,7 @@ export default () => (
           <Feature
             title={
               <React.Fragment>
-                A Hackathon is a place to{' '}
+                A hackathon is a place to{' '}
                 <ColorSpan color={colors.accent}>learn</ColorSpan>.
               </React.Fragment>
             }
@@ -68,20 +76,13 @@ export default () => (
           <Feature
             title={
               <React.Fragment>
-                A Hackathon is a place to{' '}
+                A hackathon is a place to{' '}
                 <ColorSpan color={colors.primary}>have fun</ColorSpan>.
               </React.Fragment>
             }
             details="Meals, snacks, and swag are all provided — free of charge. Special breakouts are planned to give your mind (and fingers!) a break."
             image={data.featureThree.childImageSharp.fluid}
           />
-          <h1 style={{ textAlign: 'center' }}>
-            Welcome to the{' '}
-            <ColorSpan color={colors.primary}>Hackathon</ColorSpan>:
-            <br />
-            Welcome to{' '}
-            <ColorSpan colors={colors.accent}>Hack Cincinnati</ColorSpan>
-          </h1>
         </Container>
       </>
     )}

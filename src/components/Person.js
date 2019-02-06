@@ -14,8 +14,10 @@ const StyledFlexContent = styled(FlexContent)`
     line-height: 1em;
   }
   h3 {
-    margin-bottom: 10px;
+    margin: 5px 0;
     color: ${colors.primary};
+    line-height: 1.2em;
+    word-spacing: 500px;
   }
 `
 

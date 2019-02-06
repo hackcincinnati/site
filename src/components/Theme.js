@@ -40,11 +40,7 @@ export const Color = styled.div`
 
 export const Splash = styled.div`
   width: 100%;
-  background: linear-gradient(
-    0deg,
-    ${colors.accent} ${props => props.mobilePosition || '50%'},
-    ${colors.primary} 0
-  );
+  background: ${props => props.mobileColor || colors.primary};
   color: ${colors.white};
   @media (min-width: ${breakpoints.mobile}) {
     background: linear-gradient(
@@ -57,7 +53,7 @@ export const Splash = styled.div`
 
 export const Container = styled.div`
   margin: 0 auto;
-  max-width: ${breakpoints.desktop};
+  max-width: ${props => props.maxWidth || breakpoints.desktop};
   padding: 20px 10px;
   p {
     margin: 0;
