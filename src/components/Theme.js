@@ -75,7 +75,7 @@ export const Container = styled.div`
 export const FlexContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: ${props => props.justify || 'center'};
   align-items: center;
   margin: ${props => props.margin || '0'};
 `
@@ -94,7 +94,7 @@ export const FlexItem = styled.li`
 
 export const FlexContent = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: ${props => props.direction || 'column'};
 
   width: 100%;
   border-radius: 10px;
