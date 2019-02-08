@@ -117,7 +117,8 @@ export default class RegistrationForm extends React.Component {
             referrer: '',
             note: '',
             emergency_email: '',
-            emergency_phone: ''
+            emergency_phone: '',
+            conduct: ''
           }}
           validationSchema={yup.object().shape({
             first_name: yup.string().required(REQUIRED_STRING),
@@ -149,7 +150,8 @@ export default class RegistrationForm extends React.Component {
               .string()
               .required(REQUIRED_STRING)
               .email(INVALID_EMAIL_STRING),
-            emergency_phone: yup.string().required(REQUIRED_STRING)
+            emergency_phone: yup.string().required(REQUIRED_STRING),
+            conduct: yup.boolean().required(REQUIRED_STRING)
           })}
           validateOnChange={false}
           validateOnBlur={false}
@@ -178,7 +180,7 @@ export default class RegistrationForm extends React.Component {
                 </h2>
                 <p>Just the basic details about you!</p>
               </HeaderDiv>
-              <FlexContainer>
+              <FlexContainer justify="flex-start">
                 <FormField
                   type="text"
                   name="first_name"
@@ -296,7 +298,7 @@ export default class RegistrationForm extends React.Component {
                   or guardian.
                 </p>
               </HeaderDiv>
-              <FlexContainer>
+              <FlexContainer justify="flex-start">
                 <FormField
                   type="text"
                   name="emergency_email"
@@ -334,7 +336,7 @@ export default class RegistrationForm extends React.Component {
                   if you have any questions.
                 </p>
               </HeaderDiv>
-              <FlexContainer>
+              <FlexContainer justify="flex-start">
                 <FormField
                   type="select"
                   component="select"
@@ -425,6 +427,29 @@ export default class RegistrationForm extends React.Component {
                   onChange={handleChange}
                   width="100%"
                 />
+                <FormField
+                  type="select"
+                  component="select"
+                  name="conduct"
+                  label={
+                    <React.Fragment>
+                      Do you agree to follow the Hack Cincinnati{' '}
+                      <StyledOutboundLink href="https://github.com/hackcincinnati/site/blob/master/CODE_OF_CONDUCT.md">
+                        Code of Conduct
+                      </StyledOutboundLink>
+                      ?
+                    </React.Fragment>
+                  }
+                  error={errors.conduct}
+                  value={values.conduct}
+                  requiredField
+                  width="40%"
+                >
+                  <option value="" disabled>
+                    Agree here
+                  </option>
+                  <option value="Agreed">Yes!</option>
+                </FormField>
               </FlexContainer>
               <StyledButton
                 as="button"
