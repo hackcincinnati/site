@@ -2,16 +2,14 @@ import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import styled from 'styled-components'
 
-import { ColorSpan, colors, Container } from '../components/Theme'
+import {
+  Container,
+  ColorSpan,
+  FlexContainer,
+  colors
+} from '../components/Theme'
 import Person from '../components/Person'
 import info from '../data'
-
-export const FlexContainer = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-`
 
 export default () => (
   <StaticQuery
