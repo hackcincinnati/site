@@ -3,7 +3,7 @@ import React from 'react'
 import { FlexItem, FlexContent, ColorSpan, colors } from '../components/Theme'
 
 const QuestionCard = ({ question, answer }) => (
-  <FlexItem>
+  <FlexItem padding="10px">
     <FlexContent>
       <h2>
         <ColorSpan color={colors.primary}>{question}</ColorSpan>

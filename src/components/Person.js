@@ -38,7 +38,7 @@ export const staffImage = graphql`
 `
 
 const Person = ({ details, image }) => (
-  <FlexItem width="170px" mobileWidth="50%" padding="10px 0">
+  <FlexItem width="170px" mobileWidth="50%" mobilePadding="10px 0">
     <StyledFlexContent>
       <OutboundLink
         target="_blank"

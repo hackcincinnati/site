@@ -24,7 +24,7 @@ export default () => (
         featureTwo: file(relativePath: { eq: "features/learn.jpg" }) {
           ...fluidImage
         }
-        featureThree: file(relativePath: { eq: "features/feature-3.jpg" }) {
+        featureThree: file(relativePath: { eq: "features/fun.jpg" }) {
           ...fluidImage
         }
       }

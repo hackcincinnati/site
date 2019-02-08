@@ -70,7 +70,7 @@ const Landing = () => (
             color={colors.dark}
             to="/register"
           >
-            Register Today!
+            <h4>Register Today!</h4>
           </StyledButton>
         </p>
       </Info>

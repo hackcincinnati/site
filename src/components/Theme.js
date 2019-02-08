@@ -83,10 +83,12 @@ export const FlexContainer = styled.ul`
 export const FlexItem = styled.li`
   display: flex;
   width: ${props => props.mobileWidth || '100%'};
-  margin: 0;
-  padding: ${props => props.padding || '0'};
+  margin: ${props => props.mobileMargin || '10px 0'};
+  padding: ${props => props.mobilePadding || '0'};
   @media (min-width: ${breakpoints.mobile}) {
     width: ${props => props.width || '50%'};
+    margin: ${props => props.margin || '0'};
+    padding: ${props => props.padding || '0'};
   }
 `
 
@@ -109,7 +111,6 @@ export const StyledButton = styled(Link)`
   background-color: ${props => props.background || colors.primary};
   color: ${props => props.color || colors.white};
   border: none;
-  margin: ${props => props.margin || '0px'};
   padding: 16px 32px;
   text-decoration: none;
   display: inline-block;
@@ -124,6 +125,9 @@ export const StyledButton = styled(Link)`
   :focus,
   :active {
     transform: scale(1.1);
+  }
+  @media (min-width: ${breakpoints.mobile}) {
+    margin: ${props => props.margin || '0px'};
   }
 `
 
