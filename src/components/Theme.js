@@ -55,13 +55,30 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: ${props => props.maxWidth || breakpoints.desktop};
   padding: 20px 10px;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: inherit;
+  }
   p {
     margin: 0;
   }
   @media (min-width: ${breakpoints.mobile}) {
     padding: ${props => props.padding || '50px'} 10px;
-    padding-top: ${props => props.paddingTop};
-    padding-bottom: ${props => props.paddingBottom};
+    ${props =>
+      props.paddingTop &&
+      css`
+        padding-top: ${props.paddingTop};
+      `}
+    ${props =>
+      props.paddingBottom &&
+      css`
+        padding-bottom: ${props.paddingBottom};
+      `}
   }
 `
 
@@ -69,14 +86,15 @@ export const FlexContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
+  align-items: center;
+  margin: ${props => props.margin || '0'};
 `
 
 export const FlexItem = styled.li`
   display: flex;
   width: ${props => props.mobileWidth || '100%'};
   margin: 0;
-  padding: 10px;
+  padding: ${props => props.padding || '0'};
   @media (min-width: ${breakpoints.mobile}) {
     width: ${props => props.width || '50%'};
   }
@@ -97,6 +115,28 @@ export const ColorSpan = styled.span`
   color: ${props => props.color || colors.accent};
 `
 
+export const StyledButton = styled(Link)`
+  background-color: ${props => props.background || colors.primary};
+  color: ${props => props.color || colors.white};
+  border: none;
+  margin: ${props => props.margin || '0px'};
+  padding: 16px 32px;
+  text-decoration: none;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 5px;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: transform;
+  cursor: pointer;
+  :hover,
+  :focus,
+  :active {
+    transform: scale(1.1);
+  }
+`
+
 const linkStyles = props =>
   css`
     text-decoration: none;
@@ -109,7 +149,7 @@ const linkStyles = props =>
       position: absolute;
       left: 51%;
       right: 51%;
-      bottom: 0;
+      bottom: -1px;
       background-color: ${props => props.color || colors.accent};
       height: 4px;
       transition-property: left, right;

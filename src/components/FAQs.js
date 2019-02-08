@@ -10,7 +10,7 @@ import QuestionCard from '../components/QuestionCard'
 
 export default () => (
   <Container>
-    <h1 style={{ marginLeft: 10 }}>
+    <h1>
       <ColorSpan>FAQs</ColorSpan>
     </h1>
     <FlexContainer>
@@ -20,7 +20,7 @@ export default () => (
       />
       <QuestionCard
         question="Who can come to Hack Cincinnati?"
-        answer="Any current high school is welcome to come to Hack Cincinnati &mdash; all we ask is that you bring a school issued ID with you. Additionally, teachers and parents are welcome to come to the final awards ceremony."
+        answer="Any current high school student is welcome to come to Hack Cincinnati &mdash; all we ask is that you bring a school issued ID with you. Additionally, teachers and parents are welcome to come to the final awards ceremony."
       />
       <QuestionCard
         question="How long is Hack Cincinnati?"

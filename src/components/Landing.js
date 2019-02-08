@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Splash, breakpoints, colors } from '../components/Theme'
+
+import { Link } from 'gatsby'
+import { Splash, StyledButton, breakpoints, colors } from '../components/Theme'
 import logo from '../images/logo-white.svg'
 
 export const Color = styled.div`
@@ -35,6 +37,9 @@ const Info = styled.div`
   padding: 0px 10px;
   margin: 0 auto;
   text-align: center;
+  @media (min-width: ${breakpoints.mobile}) {
+    text-align: left;
+  }
   h1 {
     color: ${colors.white};
     margin-bottom: 10px;
@@ -57,6 +62,16 @@ const Landing = () => (
         <h1>The Midwest’s largest high school hackathon.</h1>
         <p>
           July 20<sup>th</sup>&ndash;21<sup>st</sup>, 2019
+        </p>
+        <br />
+        <p>
+          <StyledButton
+            background={colors.white}
+            color={colors.dark}
+            to="/register"
+          >
+            Register Today!
+          </StyledButton>
         </p>
       </Info>
     </Container>

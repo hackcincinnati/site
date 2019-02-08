@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Landing from '../components/Landing'
 import Features from '../components/Features'
-import Register from '../components/Register'
+import Action from '../components/Action'
 import Social from '../components/Social'
 import Staff from '../components/Staff'
 import FAQs from '../components/FAQs'
@@ -26,7 +26,10 @@ const IndexPage = () => (
     />
     <Landing />
     <Features />
-    <Register />
+    <Action>
+      Register today for a guaranteed spot in Hack Cincinnati &mdash; and a free
+      T-shirt!
+    </Action>
     <FAQs />
     <Staff />
     <Social />
