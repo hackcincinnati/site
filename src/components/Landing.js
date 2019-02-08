@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Link } from 'gatsby'
 import { Splash, StyledButton, breakpoints, colors } from '../components/Theme'
 import logo from '../images/logo-white.svg'
 

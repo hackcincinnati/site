@@ -1,10 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
 import {
   Container,
   FlexContainer,
   FlexItem,
-  FlexContent,
   StyledButton,
   Splash,
   colors
