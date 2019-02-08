@@ -77,7 +77,7 @@ This code of conduct and its related procedures also applies to unacceptable beh
 
 ## 10. Contact info
 
-If you have any concerns, please email conduct@hackcincinnati.io.
+If you have any concerns, please email conduct@hackcincinnati.io. Any emails sent to this address will be kept strictly confidential.
 
 ## 11. License and attribution
 
