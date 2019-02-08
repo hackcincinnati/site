@@ -27,6 +27,7 @@ const Container = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    text-align: left;
   }
 `
 
@@ -34,7 +35,6 @@ const Info = styled.div`
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  text-align: center;
   h2 {
     color: ${colors.white};
     margin: 0;

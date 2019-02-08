@@ -8,12 +8,12 @@ import {
   colors
 } from '../components/Theme'
 
-export default ({ children }) => (
+export default ({ title, children }) => (
   <Splash color={colors.white}>
     <Container>
       <FlexContainer margin="0 0 20px">
         <FlexItem>
-          <h1>Ready to get started?</h1>
+          <h1>{title}</h1>
         </FlexItem>
         <FlexItem>
           <StyledButton
