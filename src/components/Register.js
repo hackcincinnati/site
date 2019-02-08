@@ -448,7 +448,7 @@ export default class RegistrationForm extends React.Component {
                   <option value="" disabled>
                     Agree here
                   </option>
-                  <option value="Agreed">Yes!</option>
+                  <option value="true">Yes!</option>
                 </FormField>
               </FlexContainer>
               <StyledButton
