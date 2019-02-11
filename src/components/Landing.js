@@ -42,8 +42,9 @@ const Info = styled.div`
   h1 {
     color: ${colors.white};
     margin-bottom: 10px;
+    line-height: 1.25;
   }
-  p {
+  h4 {
     margin-bottom: 0;
   }
 `
@@ -62,16 +63,13 @@ const Landing = () => (
         <p>
           July 20<sup>th</sup>&ndash;21<sup>st</sup>, 2019
         </p>
-        <br />
-        <p>
-          <StyledButton
-            background={colors.white}
-            color={colors.dark}
-            to="/register"
-          >
-            <h4>Register Today!</h4>
-          </StyledButton>
-        </p>
+        <StyledButton
+          background={colors.white}
+          color={colors.dark}
+          to="/register"
+        >
+          <h4>Register Today!</h4>
+        </StyledButton>
       </Info>
     </Container>
   </Splash>
