@@ -76,7 +76,7 @@ export const FlexContainer = styled.ul`
   display: flex;
   flex-wrap: wrap;
   justify-content: ${props => props.justify || 'center'};
-  align-items: center;
+  align-items: ${props => props.align || 'center'};
   margin: ${props => props.margin || '0'};
 `
 
