@@ -4,7 +4,17 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-import { FlexItem, FlexContent, colors } from '../components/Theme'
+import { FlexItem, FlexContent, breakpoints, colors } from '../components/Theme'
+
+export const staffImage = graphql`
+  fragment staffImage on File {
+    childImageSharp {
+      fluid(maxWidth: 200) {
+        ...GatsbyImageSharpFluid
+      }
+    }
+  }
+`
 
 const StyledFlexContent = styled(FlexContent)`
   text-align: center;
@@ -24,32 +34,23 @@ const StyledFlexContent = styled(FlexContent)`
 const StyledImage = styled(Img)`
   border-radius: 50%;
   margin: 0 auto 10px;
-  width: 110px;
+  width: ${props => props.width};
 `
 
-export const staffImage = graphql`
-  fragment staffImage on File {
-    childImageSharp {
-      fluid(maxWidth: 400) {
-        ...GatsbyImageSharpFluid
-      }
-    }
-  }
-`
-
-const Person = ({ details, image }) => (
-  <FlexItem width="170px" mobileWidth="50%" mobilePadding="10px 0">
+const Person = ({ details, image, width }) => (
+  <FlexItem width="20%" mobileWidth="50%" mobilePadding="10px 0">
     <StyledFlexContent>
       <OutboundLink
         target="_blank"
         rel="noopener noreferrer"
         href={details.social.linkedin}
       >
-        <StyledImage fluid={image} alt={details.name} />
+        <StyledImage fluid={image} alt={details.name} width={width} />
       </OutboundLink>
       <h3>{details.name}</h3>
       <p>{details.position}</p>
     </StyledFlexContent>
   </FlexItem>
 )
+
 export default Person

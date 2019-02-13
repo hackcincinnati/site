@@ -20,7 +20,8 @@ export const fonts = {
 }
 
 export const breakpoints = {
-  mobile: '700px',
+  mobile: '480px',
+  tablet: '700px',
   desktop: '950px'
 }
 
@@ -42,7 +43,7 @@ export const Splash = styled.div`
   width: 100%;
   background: ${props => props.mobileColor || colors.primary};
   color: ${colors.white};
-  @media (min-width: ${breakpoints.mobile}) {
+  @media (min-width: ${breakpoints.desktop}) {
     background: linear-gradient(
       -45deg,
       ${colors.accent} ${props => props.position || '20%'},

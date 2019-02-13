@@ -22,7 +22,7 @@ const Container = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  @media (min-width: ${breakpoints.mobile}) {
+  @media (min-width: ${breakpoints.desktop}) {
     display: flex;
     flex-direction: row;
     align-items: center;

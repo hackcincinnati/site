@@ -22,7 +22,7 @@ const Container = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  @media (min-width: ${breakpoints.mobile}) {
+  @media (min-width: ${breakpoints.tablet}) {
     padding: 50px 25px;
     display: flex;
     flex-direction: row;
@@ -36,7 +36,7 @@ const Info = styled.div`
   padding: 0px 10px;
   margin: 0 auto;
   text-align: center;
-  @media (min-width: ${breakpoints.mobile}) {
+  @media (min-width: ${breakpoints.tablet}) {
     text-align: left;
   }
   h1 {

@@ -52,38 +52,47 @@ export default () => (
           <Person
             details={info.advisors.dalton}
             image={data.dalton.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.megan}
             image={data.megan.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.vikram}
             image={data.vikram.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.alan}
             image={data.alan.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.nick}
             image={data.nick.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.mingjie}
             image={data.mingjie.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.will}
             image={data.will.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.mark}
             image={data.mark.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.annie}
             image={data.annie.childImageSharp.fluid}
+            width="65%"
           />
         </FlexContainer>
       </Container>
