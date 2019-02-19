@@ -38,7 +38,7 @@ const StyledImage = styled(Img)`
 `
 
 const Person = ({ details, image, width }) => (
-  <FlexItem width="20%" mobileWidth="50%" mobilePadding="10px 0">
+  <FlexItem width="20%" mobileWidth="50%" margin="10px 0">
     <StyledFlexContent>
       <OutboundLink
         target="_blank"
