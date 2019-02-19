@@ -35,6 +35,9 @@ export default () => (
         will: file(relativePath: { eq: "staff/advisors/will.jpg" }) {
           ...staffImage
         }
+        mullika: file(relativePath: { eq: "staff/advisors/mullika.jpg" }) {
+          ...staffImage
+        }
         mark: file(relativePath: { eq: "staff/advisors/mark.jpg" }) {
           ...staffImage
         }
@@ -82,6 +85,11 @@ export default () => (
           <Person
             details={info.advisors.will}
             image={data.will.childImageSharp.fluid}
+            width="65%"
+          />
+          <Person
+            details={info.advisors.mullika}
+            image={data.mullika.childImageSharp.fluid}
             width="65%"
           />
           <Person
