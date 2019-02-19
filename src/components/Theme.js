@@ -96,7 +96,7 @@ export const FlexItem = styled.li`
 export const FlexContent = styled.div`
   display: flex;
   flex-direction: ${props => props.direction || 'column'};
-
+  align-items: ${props => props.align && props.align};
   width: 100%;
   border-radius: 10px;
   padding: ${props => props.padding};

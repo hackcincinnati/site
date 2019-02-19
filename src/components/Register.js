@@ -4,7 +4,7 @@ import { Formik, Form } from 'formik'
 import * as yup from 'yup'
 import axios from 'axios'
 
-import FormField from '../components/FormField'
+import FormField, { Checkbox } from '../components/FormField'
 import {
   Container,
   FlexContainer,
@@ -424,13 +424,12 @@ export default class RegistrationForm extends React.Component {
                   details="(optional)"
                   error={errors.note}
                   value={values.note}
-                  onChange={handleChange}
                   width="100%"
                 />
-                <FormField
-                  type="select"
-                  component="select"
+                <Checkbox
+                  type="checkbox"
                   name="conduct"
+                  width="100%"
                   label={
                     <React.Fragment>
                       Do you agree to follow the Hack Cincinnati{' '}
@@ -442,14 +441,9 @@ export default class RegistrationForm extends React.Component {
                   }
                   error={errors.conduct}
                   value={values.conduct}
+                  onChange={handleChange}
                   requiredField
-                  width="40%"
-                >
-                  <option value="" disabled>
-                    Agree here
-                  </option>
-                  <option value="true">Yes!</option>
-                </FormField>
+                />
               </FlexContainer>
               <StyledButton
                 as="button"

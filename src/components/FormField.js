@@ -18,9 +18,33 @@ const StyledField = styled(Field)`
 
 const Error = ({ message }) => (
   <>
-    <ColorSpan color="#ff0033"> &mdash; {message}</ColorSpan>
+    <ColorSpan color="#ff0033"> &mdash; {message}&nbsp;</ColorSpan>
   </>
 )
+
+export const Checkbox = ({
+  name,
+  label,
+  requiredField,
+  error,
+  width,
+  ...props
+}) => {
+  return (
+    <FlexItem width={width || '50%'} mobileWidth="100%" padding="10px">
+      <FlexContent direction="row" align="center">
+        <label htmlFor={name}>
+          {label}
+          {requiredField && !error && (
+            <ColorSpan color="#ff0033"> *&nbsp;</ColorSpan>
+          )}
+          {error && <Error message={error} />}
+        </label>
+        <input type="checkbox" id={name} name={name} {...props} />
+      </FlexContent>
+    </FlexItem>
+  )
+}
 
 const FormField = ({
   type,
