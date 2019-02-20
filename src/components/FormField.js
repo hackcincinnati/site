@@ -4,6 +4,12 @@ import { Field } from 'formik'
 
 import { FlexItem, FlexContent, ColorSpan, colors } from '../components/Theme'
 
+const CheckboxLabel = styled.label`
+  display: block;
+  width: 100%;
+  padding: 10px;
+`
+
 const StyledField = styled(Field)`
   appearance: none;
   padding: 6px 12px;
@@ -31,18 +37,14 @@ export const Checkbox = ({
   ...props
 }) => {
   return (
-    <FlexItem width={width || '50%'} mobileWidth="100%" padding="10px">
-      <FlexContent direction="row" align="center">
-        <label htmlFor={name}>
-          {label}
-          {requiredField && !error && (
-            <ColorSpan color="#ff0033"> *&nbsp;</ColorSpan>
-          )}
-          {error && <Error message={error} />}
-        </label>
-        <input type="checkbox" id={name} name={name} {...props} />
-      </FlexContent>
-    </FlexItem>
+    <CheckboxLabel htmlFor={name}>
+      {label}
+      {requiredField && !error && (
+        <ColorSpan color="#ff0033"> *&nbsp;</ColorSpan>
+      )}
+      {error && <Error message={error} />}
+      <input type="checkbox" id={name} name={name} {...props} />
+    </CheckboxLabel>
   )
 }
 
