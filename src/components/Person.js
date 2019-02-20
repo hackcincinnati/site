@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Img from 'gatsby-image'
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
-import { FlexItem, FlexContent, breakpoints, colors } from '../components/Theme'
+import { FlexItem, FlexContent, colors } from '../components/Theme'
 
 export const staffImage = graphql`
   fragment staffImage on File {

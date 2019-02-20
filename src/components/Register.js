@@ -30,6 +30,7 @@ function equalTo(ref, msg) {
   return this.test({
     name: 'equalTo',
     exclusive: false,
+    // eslint-disable-next-line
     message: msg || '${path} must be the same as ${reference}',
     params: {
       reference: ref.path
