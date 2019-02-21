@@ -17,7 +17,9 @@ import {
 const REQUIRED_STRING = 'required'
 const INVALID_NUMBER_STRING = 'must be a valid number'
 const INVALID_EMAIL_STRING = 'must be a valid email'
+const INVALID_PHONE_STRING = 'must be a valid phone'
 const UNMATCHED_EMAIL_STRING = 'emails must be the same'
+const PHONE_REGEX = /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/
 
 const HeaderDiv = styled.div`
   margin: 50px 10px 30px;
@@ -134,7 +136,9 @@ export default class RegistrationForm extends React.Component {
               .required(REQUIRED_STRING)
               .email(INVALID_EMAIL_STRING)
               .equalTo(yup.ref('email'), UNMATCHED_EMAIL_STRING),
-            phone_number: yup.string(),
+            phone_number: yup
+              .string()
+              .matches(PHONE_REGEX, INVALID_PHONE_STRING),
             school: yup.string().required(REQUIRED_STRING),
             grade: yup.string().required(REQUIRED_STRING),
             age: yup
@@ -151,7 +155,10 @@ export default class RegistrationForm extends React.Component {
               .string()
               .required(REQUIRED_STRING)
               .email(INVALID_EMAIL_STRING),
-            emergency_phone: yup.string().required(REQUIRED_STRING),
+            emergency_phone: yup
+              .string()
+              .matches(PHONE_REGEX, INVALID_PHONE_STRING)
+              .required(REQUIRED_STRING),
             conduct: yup.boolean().required(REQUIRED_STRING)
           })}
           validateOnChange={false}
