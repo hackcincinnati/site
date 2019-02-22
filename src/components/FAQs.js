@@ -28,7 +28,7 @@ export default () => (
       />
       <QuestionCard
         question="Do I need to know how to code?"
-        answer="Hack Cincinnati is open to all skill levels &mdash; both beginner and veteran coders may attend."
+        answer="Hack Cincinnati is completely beginner friendly &mdash; coders of all skill levels are welcome to come learn or create something new!"
       />
       <QuestionCard
         question="Is Hack Cincinnati free?"
