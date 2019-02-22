@@ -11,11 +11,11 @@ import {
 export default ({ title, children }) => (
   <Splash color={colors.white}>
     <Container>
-      <FlexContainer margin="0 0 20px">
-        <FlexItem>
+      <FlexContainer justify="flex-start" margin="0 0 20px">
+        <FlexItem width="inherit">
           <h1>{title}</h1>
         </FlexItem>
-        <FlexItem>
+        <FlexItem width="inherit" margin="0 15px">
           <StyledButton
             background={colors.white}
             color={colors.dark}
