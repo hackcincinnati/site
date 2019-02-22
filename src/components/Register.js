@@ -409,7 +409,7 @@ export default class RegistrationForm extends React.Component {
                   type="text"
                   name="dietary_restrictions"
                   label="Dietary Restrictions"
-                  placeholder="Gluten free"
+                  placeholder="Gluten free, vegan, etc."
                   error={errors.dietary_restrictions}
                   value={values.dietary_restrictions}
                 />
