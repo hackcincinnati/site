@@ -96,8 +96,8 @@ export default class RegistrationForm extends React.Component {
           <p>
             Are you a parent, teacher, or mentor interested in Hack Cincinnati?
             Email us at{' '}
-            <StyledOutboundLink href="mailto:team@hackcincinnati.io">
-              team@hackcincinnati.io
+            <StyledOutboundLink href="mailto:hello@hackcincinnati.io">
+              hello@hackcincinnati.io
             </StyledOutboundLink>{' '}
             to learn how you can get involved!
           </p>
@@ -337,9 +337,9 @@ export default class RegistrationForm extends React.Component {
                   case-by-case basis. Please email{' '}
                   <StyledOutboundLink
                     color={colors.primary}
-                    href="mailto:team@hackcincinnati.io"
+                    href="mailto:hello@hackcincinnati.io"
                   >
-                    team@hackcincinnati.io
+                    hello@hackcincinnati.io
                   </StyledOutboundLink>{' '}
                   if you have any questions.
                 </p>

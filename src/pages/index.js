@@ -50,8 +50,8 @@ const IndexPage = () => (
       </StyledOutboundLink>{' '}
       for more details and event updates! If you have any questions, please
       email us at{' '}
-      <StyledOutboundLink href="mailto:team@hackcincinnati.io">
-        team@hackcincinnati.io
+      <StyledOutboundLink href="mailto:hello@hackcincinnati.io">
+        hello@hackcincinnati.io
       </StyledOutboundLink>
       .
     </Action>
