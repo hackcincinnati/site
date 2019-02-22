@@ -1,11 +1,14 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
+import Header from '../components/Header'
 import SEO from '../components/SEO'
 import { Container, StyledLink } from '../components/Theme'
 
 const NotFoundPage = () => (
   <Layout>
+    <Header />
+
     <Container>
       <SEO title="404: Page Not Found" />
       <h1>NOT FOUND</h1>

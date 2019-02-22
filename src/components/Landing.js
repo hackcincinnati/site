@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Splash, breakpoints, colors } from '../components/Theme'
+
+import { Splash, StyledButton, breakpoints, colors } from '../components/Theme'
 import logo from '../images/logo-white.svg'
 
 export const Color = styled.div`
@@ -21,7 +22,7 @@ const Container = styled.div`
   margin: 0 auto;
   text-align: center;
 
-  @media (min-width: ${breakpoints.mobile}) {
+  @media (min-width: ${breakpoints.tablet}) {
     padding: 50px 25px;
     display: flex;
     flex-direction: row;
@@ -35,11 +36,15 @@ const Info = styled.div`
   padding: 0px 10px;
   margin: 0 auto;
   text-align: center;
+  @media (min-width: ${breakpoints.tablet}) {
+    text-align: left;
+  }
   h1 {
     color: ${colors.white};
     margin-bottom: 10px;
+    line-height: 1.25;
   }
-  p {
+  h4 {
     margin-bottom: 0;
   }
 `
@@ -58,6 +63,13 @@ const Landing = () => (
         <p>
           July 20<sup>th</sup>&ndash;21<sup>st</sup>, 2019
         </p>
+        <StyledButton
+          background={colors.white}
+          color={colors.dark}
+          to="/register"
+        >
+          <h4>Register Today!</h4>
+        </StyledButton>
       </Info>
     </Container>
   </Splash>

@@ -1,17 +1,14 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 
-import { Container, ColorSpan, colors } from '../components/Theme'
+import {
+  Container,
+  FlexContainer,
+  ColorSpan,
+  colors
+} from '../components/Theme'
 import Person from '../components/Person'
 import info from '../data'
-
-export const FlexContainer = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-`
 
 export default () => (
   <StaticQuery
@@ -38,6 +35,9 @@ export default () => (
         will: file(relativePath: { eq: "staff/advisors/will.jpg" }) {
           ...staffImage
         }
+        mullika: file(relativePath: { eq: "staff/advisors/mullika.jpg" }) {
+          ...staffImage
+        }
         mark: file(relativePath: { eq: "staff/advisors/mark.jpg" }) {
           ...staffImage
         }
@@ -55,38 +55,52 @@ export default () => (
           <Person
             details={info.advisors.dalton}
             image={data.dalton.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.megan}
             image={data.megan.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.vikram}
             image={data.vikram.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.alan}
             image={data.alan.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.nick}
             image={data.nick.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.mingjie}
             image={data.mingjie.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.will}
             image={data.will.childImageSharp.fluid}
+            width="65%"
+          />
+          <Person
+            details={info.advisors.mullika}
+            image={data.mullika.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.mark}
             image={data.mark.childImageSharp.fluid}
+            width="65%"
           />
           <Person
             details={info.advisors.annie}
             image={data.annie.childImageSharp.fluid}
+            width="65%"
           />
         </FlexContainer>
       </Container>

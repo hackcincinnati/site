@@ -1,10 +1,4 @@
 {
-  "social": {
-    "twitter": "https://twitter.com/hackcincinnati",
-    "instagram": "https://instagram.com/hackcincinnati",
-    "facebook": "https://facebook.com/hackcincinnati",
-    "email": "mailto:masonhackclub@gmail.com"
-  },
   "directors": {
     "alishaan": {
       "name": "Alishaan Ali",
@@ -90,6 +84,13 @@
       "position": "Logistics & Sponsorship",
       "social": {
         "linkedin": "https://www.linkedin.com/in/willmechler"
+      }
+    },
+    "mullika": {
+      "name": "Mullika Pandit",
+      "position": "Staff Writer",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/mullika-pandit-15732617a/"
       }
     },
     "mark": {

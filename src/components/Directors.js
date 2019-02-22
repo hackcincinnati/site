@@ -1,17 +1,14 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 
-import { ColorSpan, colors, Container } from '../components/Theme'
+import {
+  Container,
+  ColorSpan,
+  FlexContainer,
+  colors
+} from '../components/Theme'
 import Person from '../components/Person'
 import info from '../data'
-
-export const FlexContainer = styled.ul`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-`
 
 export default () => (
   <StaticQuery
@@ -43,22 +40,27 @@ export default () => (
           <Person
             details={info.directors.alishaan}
             image={data.alishaan.childImageSharp.fluid}
+            width="75%"
           />
           <Person
             details={info.directors.kabir}
             image={data.kabir.childImageSharp.fluid}
+            width="75%"
           />
           <Person
             details={info.directors.katherine}
             image={data.katherine.childImageSharp.fluid}
+            width="75%"
           />
           <Person
             details={info.directors.chris}
             image={data.chris.childImageSharp.fluid}
+            width="75%"
           />
           <Person
             details={info.directors.jack}
             image={data.jack.childImageSharp.fluid}
+            width="75%"
           />
         </FlexContainer>
       </Container>
