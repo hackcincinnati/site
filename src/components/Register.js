@@ -138,6 +138,7 @@ export default class RegistrationForm extends React.Component {
               .equalTo(yup.ref('email'), UNMATCHED_EMAIL_STRING),
             phone_number: yup
               .string()
+              .required(REQUIRED_STRING)
               .matches(PHONE_REGEX, INVALID_PHONE_STRING),
             school: yup.string().required(REQUIRED_STRING),
             grade: yup.string().required(REQUIRED_STRING),
@@ -251,6 +252,7 @@ export default class RegistrationForm extends React.Component {
                   placeholder="513-555-5555"
                   error={errors.phone_number}
                   value={values.phone_number}
+                  requiredField
                   width="20%"
                 />
                 <FormField
