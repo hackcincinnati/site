@@ -56,15 +56,6 @@ export const Container = styled.div`
   margin: 0 auto;
   max-width: ${props => props.maxWidth || breakpoints.desktop};
   padding: 20px 10px;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: inherit;
-  }
   p {
     margin: 0;
   }
@@ -99,6 +90,7 @@ export const FlexContent = styled.div`
   align-items: ${props => props.align && props.align};
   width: 100%;
   border-radius: 10px;
+  margin: ${props => props.margin};
   padding: ${props => props.padding};
   color: ${props => props.color};
   background-color: ${props => props.backgroundColor};

@@ -6,6 +6,7 @@ import Features from '../components/Features'
 import Action from '../components/Action'
 import Staff from '../components/Staff'
 import Sponsors from '../components/Sponsors'
+import Timeline from '../components/Timeline'
 import FAQs from '../components/FAQs'
 import SEO from '../components/SEO'
 
@@ -32,6 +33,7 @@ const IndexPage = () => (
       Register today for a guaranteed spot in Hack Cincinnati &mdash; and a free
       T-shirt!
     </Action>
+    <Timeline />
     <FAQs />
     <Staff />
     <Sponsors />

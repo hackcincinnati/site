@@ -5,6 +5,7 @@ import {
   FlexItem,
   StyledButton,
   Splash,
+  ColorSpan,
   colors
 } from '../components/Theme'
 
@@ -13,7 +14,9 @@ export default ({ title, children }) => (
     <Container>
       <FlexContainer justify="flex-start" margin="0 0 20px">
         <FlexItem width="inherit">
-          <h1>{title}</h1>
+          <h1>
+            <ColorSpan color={colors.white}>{title}</ColorSpan>
+          </h1>
         </FlexItem>
         <FlexItem width="inherit" margin="0 15px">
           <StyledButton
