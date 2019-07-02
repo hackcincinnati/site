@@ -7,6 +7,13 @@
         "linkedin": "https://www.linkedin.com/in/alishaan-ali-645026152"
       }
     },
+    "josh": {
+      "name": "Josh Christensen",
+      "position": "Head of Experience",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/josh-christensen-91a625182"
+      }
+    },
     "kabir": {
       "name": "Kabir Doshi",
       "position": "Head of Logistics",
@@ -19,13 +26,6 @@
       "position": "Head of Sponsorship",
       "social": {
         "linkedin": "https://www.linkedin.com/in/katherine-h-b35593161"
-      }
-    },
-    "chris": {
-      "name": "Chris Lee",
-      "position": "Head of Experience",
-      "social": {
-        "linkedin": "https://www.linkedin.com/in/chris-lee-28569259"
       }
     },
     "jack": {

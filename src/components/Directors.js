@@ -17,13 +17,13 @@ export default () => (
         alishaan: file(relativePath: { eq: "staff/directors/alishaan.jpg" }) {
           ...staffImage
         }
+        josh: file(relativePath: { eq: "staff/directors/josh.jpg" }) {
+          ...staffImage
+        }
         kabir: file(relativePath: { eq: "staff/directors/kabir.jpg" }) {
           ...staffImage
         }
         katherine: file(relativePath: { eq: "staff/directors/katherine.jpg" }) {
-          ...staffImage
-        }
-        chris: file(relativePath: { eq: "staff/directors/chris.jpg" }) {
           ...staffImage
         }
         jack: file(relativePath: { eq: "staff/directors/jack.png" }) {
@@ -43,6 +43,11 @@ export default () => (
             width="75%"
           />
           <Person
+            details={info.directors.josh}
+            image={data.josh.childImageSharp.fluid}
+            width="75%"
+          />
+          <Person
             details={info.directors.kabir}
             image={data.kabir.childImageSharp.fluid}
             width="75%"
@@ -50,11 +55,6 @@ export default () => (
           <Person
             details={info.directors.katherine}
             image={data.katherine.childImageSharp.fluid}
-            width="75%"
-          />
-          <Person
-            details={info.directors.chris}
-            image={data.chris.childImageSharp.fluid}
             width="75%"
           />
           <Person
