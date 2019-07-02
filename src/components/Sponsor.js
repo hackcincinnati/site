@@ -9,7 +9,7 @@ import { FlexItem, FlexContent } from '../components/Theme'
 export const sponsorImage = graphql`
   fragment sponsorImage on File {
     childImageSharp {
-      fluid(maxWidth: 400) {
+      fluid(maxWidth: 500) {
         ...GatsbyImageSharpFluid_noBase64
       }
     }
@@ -18,14 +18,14 @@ export const sponsorImage = graphql`
 
 const StyledImage = styled(Img)`
   height: 100%;
-  max-width: 200px;
+  max-width: 500px;
 `
 
-const Sponsor = ({ image, link, name }) => (
+const Sponsor = ({ image, link, name, size }) => (
   <FlexItem
     margin="0 50px"
     mobilePadding="0 10px"
-    width="200px"
+    width={size}
     mobileWidth="50%"
   >
     <FlexContent>

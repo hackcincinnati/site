@@ -9,10 +9,37 @@ import {
 } from '../components/Theme'
 import Sponsor from '../components/Sponsor'
 
+const sizes = {
+  small: '150px',
+  medium: '200px',
+  big: '300px'
+}
+
 export default () => (
   <StaticQuery
     query={graphql`
       query {
+        cengage: file(relativePath: { eq: "sponsors/cengage.png" }) {
+          ...sponsorImage
+        }
+        fifththird: file(relativePath: { eq: "sponsors/fifththird.png" }) {
+          ...sponsorImage
+        }
+        medium: file(relativePath: { eq: "sponsors/medium.png" }) {
+          ...sponsorImage
+        }
+        getronics: file(relativePath: { eq: "sponsors/getronics.png" }) {
+          ...sponsorImage
+        }
+        nku: file(relativePath: { eq: "sponsors/nku.png" }) {
+          ...sponsorImage
+        }
+        rstudio: file(relativePath: { eq: "sponsors/rstudio.png" }) {
+          ...sponsorImage
+        }
+        keybank: file(relativePath: { eq: "sponsors/keybank.jpg" }) {
+          ...sponsorImage
+        }
         zapier: file(relativePath: { eq: "sponsors/zapier.png" }) {
           ...sponsorImage
         }
@@ -26,16 +53,64 @@ export default () => (
         <h2>
           <ColorSpan color={colors.accent}>Sponsors</ColorSpan>
         </h2>
-        <FlexContainer>
+        <FlexContainer margin="50px">
+          <Sponsor
+            image={data.cengage.childImageSharp.fluid}
+            link="https://cengage.com"
+            name="Cengage"
+            size={sizes.big}
+          />
+          <Sponsor
+            image={data.fifththird.childImageSharp.fluid}
+            link="https://53.com"
+            name="5/3 Bank"
+            size={sizes.big}
+          />
+        </FlexContainer>
+        <FlexContainer margin="50px">
+          <Sponsor
+            image={data.medium.childImageSharp.fluid}
+            link="https://medium.com"
+            name="Medium"
+            size={sizes.medium}
+          />
+          <Sponsor
+            image={data.getronics.childImageSharp.fluid}
+            link="https://getronics.com"
+            name="Getronics"
+            size={sizes.medium}
+          />
+        </FlexContainer>
+        <FlexContainer margin="50px">
+          <Sponsor
+            image={data.nku.childImageSharp.fluid}
+            link="https://nku.edu"
+            name="Northern Kentucky University"
+            size={sizes.small}
+          />
+          <Sponsor
+            image={data.rstudio.childImageSharp.fluid}
+            link="https://rstudio.com"
+            name="RStudio"
+            size={sizes.small}
+          />
+          <Sponsor
+            image={data.keybank.childImageSharp.fluid}
+            link="https://key.com"
+            name="Key Bank"
+            size={sizes.small}
+          />
           <Sponsor
             image={data.zapier.childImageSharp.fluid}
             link="https://zapier.com"
             name="Zapier"
+            size={sizes.small}
           />
           <Sponsor
             image={data.bank.childImageSharp.fluid}
             link="https://hackclub.com/bank"
             name="Hack Club Bank"
+            size={sizes.small}
           />
         </FlexContainer>
       </Container>
