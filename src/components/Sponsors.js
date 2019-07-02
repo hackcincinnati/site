@@ -10,6 +10,7 @@ import {
 import Sponsor from '../components/Sponsor'
 
 const sizes = {
+  xs: '125px',
   small: '150px',
   medium: '200px',
   big: '300px'
@@ -60,18 +61,12 @@ export default () => (
             name="Cengage"
             size={sizes.big}
           />
+        </FlexContainer>
+        <FlexContainer margin="50px">
           <Sponsor
             image={data.fifththird.childImageSharp.fluid}
             link="https://53.com"
             name="5/3 Bank"
-            size={sizes.big}
-          />
-        </FlexContainer>
-        <FlexContainer margin="50px">
-          <Sponsor
-            image={data.medium.childImageSharp.fluid}
-            link="https://medium.com"
-            name="Medium"
             size={sizes.medium}
           />
           <Sponsor
@@ -82,6 +77,12 @@ export default () => (
           />
         </FlexContainer>
         <FlexContainer margin="50px">
+          <Sponsor
+            image={data.medium.childImageSharp.fluid}
+            link="https://medium.com"
+            name="Medium"
+            size={sizes.small}
+          />
           <Sponsor
             image={data.nku.childImageSharp.fluid}
             link="https://nku.edu"
@@ -104,7 +105,7 @@ export default () => (
             image={data.zapier.childImageSharp.fluid}
             link="https://zapier.com"
             name="Zapier"
-            size={sizes.small}
+            size={sizes.xs}
           />
           <Sponsor
             image={data.bank.childImageSharp.fluid}
