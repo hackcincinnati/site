@@ -4,13 +4,13 @@
 
 ## Directors
 
-| Name                                                                | Role                |
-| ------------------------------------------------------------------- | ------------------- |
-| [Alishaan Ali](https://www.linkedin.com/in/alishaan-ali-645026152/) | Head of Finance     |
-| [Kabir Doshi](https://www.linkedin.com/in/kabirdoshi/)              | Head of Logistics   |
-| [Katherine Hu](https://www.linkedin.com/in/katherine-h-b35593161/)  | Head of Sponsorship |
-| [Chris Lee](https://www.linkedin.com/in/chris-lee-28569259/)        | Head of Experience  |
-| [Jack Margeson](https://www.linkedin.com/in/jack-margeson/)         | Head of Marketing   |
+| Name                                                                        | Role                |
+| --------------------------------------------------------------------------- | ------------------- |
+| [Alishaan Ali](https://www.linkedin.com/in/alishaan-ali-645026152/)         | Head of Finance     |
+| [Josh Christensen](https://www.linkedin.com/in/josh-christensen-91a625182/) | Head of Experience  |
+| [Kabir Doshi](https://www.linkedin.com/in/kabirdoshi/)                      | Head of Logistics   |
+| [Katherine Hu](https://www.linkedin.com/in/katherine-h-b35593161/)          | Head of Sponsorship |
+| [Jack Margeson](https://www.linkedin.com/in/jack-margeson/)                 | Head of Marketing   |
 
 ## Advisors
 
