@@ -42,6 +42,12 @@ export default () => (
         keybank: file(relativePath: { eq: "sponsors/keybank.jpg" }) {
           ...sponsorImage
         }
+        jaybird: file(relativePath: { eq: "sponsors/jaybird.png" }) {
+          ...sponsorImage
+        }
+        uc: file(relativePath: { eq: "sponsors/uc.png" }) {
+          ...sponsorImage
+        }
         zapier: file(relativePath: { eq: "sponsors/zapier.png" }) {
           ...sponsorImage
         }
@@ -100,6 +106,18 @@ export default () => (
             image={data.keybank.childImageSharp.fluid}
             link="https://key.com"
             name="Key Bank"
+            size={sizes.small}
+          />
+          <Sponsor
+            image={data.jaybird.childImageSharp.fluid}
+            link="https://jaybirdsport.com"
+            name="JayBird Headphones"
+            size={sizes.small}
+          />
+          <Sponsor
+            image={data.uc.childImageSharp.fluid}
+            link="https://uc.edu"
+            name="University of Cincinnati"
             size={sizes.small}
           />
           <Sponsor

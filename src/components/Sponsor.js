@@ -23,8 +23,8 @@ const StyledImage = styled(Img)`
 
 const Sponsor = ({ image, link, name, size }) => (
   <FlexItem
-    margin="0 50px"
-    mobilePadding="0 10px"
+    margin="10px 50px"
+    mobilePadding="5px 10px"
     width={size}
     mobileWidth="50%"
   >
