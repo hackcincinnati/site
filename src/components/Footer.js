@@ -26,6 +26,13 @@ const Footer = () => (
         href="https://github.com/hackcincinnati/site"
       >
         GitHub
+      </StyledOutboundLink>{' '}
+      &#47;&#47; Read{' '}
+      <StyledOutboundLink
+        color={colors.primary}
+        href="https://github.com/hackcincinnati/site/blob/master/CODE_OF_CONDUCT.md"
+      >
+        Code of Conduct
       </StyledOutboundLink>
     </Container>
   </Color>
