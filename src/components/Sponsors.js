@@ -12,8 +12,9 @@ import Sponsor from '../components/Sponsor'
 const sizes = {
   xs: '125px',
   small: '150px',
-  medium: '200px',
-  big: '300px'
+  medium: '175px',
+  large: '200px',
+  xl: '300px'
 }
 
 export default () => (
@@ -59,7 +60,7 @@ export default () => (
             image={data.cengage.childImageSharp.fluid}
             link="https://cengage.com"
             name="Cengage"
-            size={sizes.big}
+            size={sizes.xl}
           />
         </FlexContainer>
         <FlexContainer margin="50px">
@@ -73,7 +74,7 @@ export default () => (
             image={data.getronics.childImageSharp.fluid}
             link="https://getronics.com"
             name="Getronics"
-            size={sizes.medium}
+            size={sizes.large}
           />
         </FlexContainer>
         <FlexContainer margin="50px">
