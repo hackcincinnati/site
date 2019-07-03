@@ -51,12 +51,12 @@ export default () => (
             <StyledOutboundLink href="https://drive.google.com/open?id=1QGKkt3bkA5ArzQb2LdMqEGlMNXCPp9zv">
               bus schedule
             </StyledOutboundLink>
-            . If you'd like to take the bus, please email us at{' '}
+            . If you'd like to take the bus, or for questions about other
+            assistance, please email us at{' '}
             <StyledOutboundLink href="mailto:team@hackcincinnati.io">
               team@hackcincinnati.io
             </StyledOutboundLink>{' '}
             and mark "interested in travel assistance" on your registration.
-            Unfortunately, no other travel assistance can be provided.
           </Fragment>
         }
       />
