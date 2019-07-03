@@ -335,15 +335,17 @@ export default class RegistrationForm extends React.Component {
                   </ColorSpan>
                 </h2>
                 <p>
-                  Travel assistance is not guaranteed but may be provided on a
-                  case-by-case basis. Please email{' '}
-                  <StyledOutboundLink
-                    color={colors.primary}
-                    href="mailto:team@hackcincinnati.io"
-                  >
+                  We have a bus to/from Chicago and Indianapolis. For more
+                  details, see the{' '}
+                  <StyledOutboundLink href="https://drive.google.com/open?id=1QGKkt3bkA5ArzQb2LdMqEGlMNXCPp9zv">
+                    bus schedule
+                  </StyledOutboundLink>
+                  . If you'd like to take the bus, please email us at{' '}
+                  <StyledOutboundLink href="mailto:team@hackcincinnati.io">
                     team@hackcincinnati.io
                   </StyledOutboundLink>{' '}
-                  if you have any questions.
+                  and mark "interested in travel assistance" below.
+                  Unfortunately, no other travel assistance can be provided.
                 </p>
               </HeaderDiv>
               <FlexContainer justify="flex-start">

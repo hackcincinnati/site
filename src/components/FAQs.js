@@ -20,7 +20,15 @@ export default () => (
       />
       <QuestionCard
         question="Where is Hack Cincinnati?"
-        answer="Hack Cincinnati will be hosted in Cincinnati, OH. Venue details will be released closer to the event &mdash; all students are welcome to register today to receive important event updates."
+        answer=<Fragment>
+          Hack Cincinnati will be hosted in Cincinnati, Ohio, at the University
+          of Cincinnati! We will be using the UC Campus Recreation Center,
+          located at{' '}
+          <StyledOutboundLink href="https://goo.gl/maps/z1tH5FxxEM3q7BJm7">
+            2820 Bearcat Way, Cincinnati, OH 45221
+          </StyledOutboundLink>
+          .
+        </Fragment>
       />
       <QuestionCard
         question="Who can come to Hack Cincinnati?"
@@ -35,14 +43,20 @@ export default () => (
         answer="At the minimum, you'll need a student ID, laptop, and charger. We also recommend bringing a change of clothes, toiletries, and a sleeping bag or pillow. You won't be able to leave Hack Cincinnati after the event starts, so make sure you have any medications you'll need."
       />
       <QuestionCard
-        question="Is there a code of conduct?"
+        question="Is there any travel assistance?"
         answer={
           <Fragment>
-            Yes. Please read our{' '}
-            <StyledOutboundLink href="https://github.com/hackcincinnati/site/blob/master/CODE_OF_CONDUCT.md">
-              Code of Conduct
+            A bus will be available for students travelling from Chicago or
+            Indianapolis! For more details, see the{' '}
+            <StyledOutboundLink href="https://drive.google.com/open?id=1QGKkt3bkA5ArzQb2LdMqEGlMNXCPp9zv">
+              bus schedule
+            </StyledOutboundLink>
+            . If you'd like to take the bus, please email us at{' '}
+            <StyledOutboundLink href="mailto:team@hackcincinnati.io">
+              team@hackcincinnati.io
             </StyledOutboundLink>{' '}
-            carefully prior to attending.
+            and mark "interested in travel assistance" on your registration.
+            Unfortunately, no other travel assistance can be provided.
           </Fragment>
         }
       />
