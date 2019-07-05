@@ -33,6 +33,9 @@ export default () => (
         getronics: file(relativePath: { eq: "sponsors/getronics.png" }) {
           ...sponsorImage
         }
+        uc: file(relativePath: { eq: "sponsors/uc.png" }) {
+          ...sponsorImage
+        }
         nku: file(relativePath: { eq: "sponsors/nku.png" }) {
           ...sponsorImage
         }
@@ -42,16 +45,19 @@ export default () => (
         keybank: file(relativePath: { eq: "sponsors/keybank.jpg" }) {
           ...sponsorImage
         }
-        jaybird: file(relativePath: { eq: "sponsors/jaybird.png" }) {
+        amazon: file(relativePath: { eq: "sponsors/amazon.png" }) {
           ...sponsorImage
         }
-        uc: file(relativePath: { eq: "sponsors/uc.png" }) {
+        jaybird: file(relativePath: { eq: "sponsors/jaybird.png" }) {
           ...sponsorImage
         }
         zapier: file(relativePath: { eq: "sponsors/zapier.png" }) {
           ...sponsorImage
         }
         bank: file(relativePath: { eq: "sponsors/bank.png" }) {
+          ...sponsorImage
+        }
+        ultimate: file(relativePath: { eq: "sponsors/ultimate.png" }) {
           ...sponsorImage
         }
       }
@@ -66,6 +72,12 @@ export default () => (
             image={data.cengage.childImageSharp.fluid}
             link="https://cengage.com"
             name="Cengage"
+            size={sizes.xl}
+          />
+          <Sponsor
+            image={data.uc.childImageSharp.fluid}
+            link="https://uc.edu"
+            name="University of Cincinnati"
             size={sizes.xl}
           />
         </FlexContainer>
@@ -109,15 +121,21 @@ export default () => (
             size={sizes.small}
           />
           <Sponsor
+            image={data.amazon.childImageSharp.fluid}
+            link="https://amazon.com"
+            name="Amazon"
+            size={sizes.small}
+          />
+          <Sponsor
             image={data.jaybird.childImageSharp.fluid}
             link="https://jaybirdsport.com"
             name="JayBird Headphones"
             size={sizes.small}
           />
           <Sponsor
-            image={data.uc.childImageSharp.fluid}
-            link="https://uc.edu"
-            name="University of Cincinnati"
+            image={data.bank.childImageSharp.fluid}
+            link="https://hackclub.com/bank"
+            name="Hack Club Bank"
             size={sizes.small}
           />
           <Sponsor
@@ -127,9 +145,9 @@ export default () => (
             size={sizes.xs}
           />
           <Sponsor
-            image={data.bank.childImageSharp.fluid}
-            link="https://hackclub.com/bank"
-            name="Hack Club Bank"
+            image={data.ultimate.childImageSharp.fluid}
+            link="https://ultim8screenprinting.com"
+            name="Ultimate Screen Printing"
             size={sizes.small}
           />
         </FlexContainer>
