@@ -22,10 +22,10 @@ export default () => (
         question="Where is Hack Cincinnati?"
         answer=<Fragment>
           Hack Cincinnati will be hosted in Cincinnati, Ohio, at the University
-          of Cincinnati! We will be using the UC Campus Recreation Center,
-          located at{' '}
-          <StyledOutboundLink href="https://goo.gl/maps/z1tH5FxxEM3q7BJm7">
-            2820 Bearcat Way, Cincinnati, OH 45221
+          of Cincinnati! We will be using Zimmer Hall for our check-in, located
+          at{' '}
+          <StyledOutboundLink href="https://goo.gl/maps/QS5QoQbdRqKjyN4P7">
+            315 College Dr, Cincinnati, OH 45219
           </StyledOutboundLink>
           .
         </Fragment>
