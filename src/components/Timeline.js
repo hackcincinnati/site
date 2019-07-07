@@ -29,7 +29,7 @@ const TimelineItem = ({ time, event }) => (
 )
 
 export default () => (
-  <Container>
+  <Container id="schedule">
     <h1>
       <ColorSpan>Schedule</ColorSpan>
     </h1>
