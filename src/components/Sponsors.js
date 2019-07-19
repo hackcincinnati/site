@@ -10,6 +10,7 @@ import {
 import Sponsor from '../components/Sponsor'
 
 const sizes = {
+  xxs: '100px',
   xs: '125px',
   small: '150px',
   medium: '175px',
@@ -58,6 +59,9 @@ export default () => (
           ...sponsorImage
         }
         ultimate: file(relativePath: { eq: "sponsors/ultimate.png" }) {
+          ...sponsorImage
+        }
+        eightyfourfiftyone: file(relativePath: { eq: "sponsors/8451.jpg" }) {
           ...sponsorImage
         }
       }
@@ -149,6 +153,12 @@ export default () => (
             link="https://ultim8screenprinting.com"
             name="Ultimate Screen Printing"
             size={sizes.small}
+          />
+          <Sponsor
+            image={data.eightyfourfiftyone.childImageSharp.fluid}
+            link="https://8451.com"
+            name="84.51"
+            size={sizes.xxs}
           />
         </FlexContainer>
       </Container>
