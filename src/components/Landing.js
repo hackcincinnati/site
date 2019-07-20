@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Splash, StyledButton, breakpoints, colors } from '../components/Theme'
+import {
+  Splash,
+  StyledOutboundButton,
+  breakpoints,
+  colors
+} from '../components/Theme'
 import logo from '../images/logo-white.svg'
 
 export const Color = styled.div`
@@ -63,13 +68,13 @@ const Landing = () => (
         <p>
           July 20<sup>th</sup>&ndash;21<sup>st</sup>, 2019
         </p>
-        <StyledButton
+        <StyledOutboundButton
           background={colors.white}
           color={colors.dark}
-          to="/register"
+          href="https://hackcincinnati.devpost.com"
         >
-          <h4>Register Today!</h4>
-        </StyledButton>
+          <h4>Submit Your Project!</h4>
+        </StyledOutboundButton>
       </Info>
     </Container>
   </Splash>

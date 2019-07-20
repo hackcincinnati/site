@@ -3,7 +3,7 @@ import {
   Container,
   FlexContainer,
   FlexItem,
-  StyledButton,
+  StyledOutboundButton,
   Splash,
   ColorSpan,
   colors
@@ -19,13 +19,13 @@ export default ({ title, children }) => (
           </h1>
         </FlexItem>
         <FlexItem width="inherit" margin="0 15px">
-          <StyledButton
+          <StyledOutboundButton
             background={colors.white}
             color={colors.dark}
-            to="/register"
+            href="https://hackcincinnati.devpost.com/"
           >
-            <h4>Register Today!</h4>
-          </StyledButton>
+            <h4>Submit Projects!</h4>
+          </StyledOutboundButton>
         </FlexItem>
       </FlexContainer>
       <p>{children}</p>

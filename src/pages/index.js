@@ -29,36 +29,15 @@ const IndexPage = () => (
       ]}
     />
     <Landing />
-    <Features />
-    <Action title="Ready to get started?">
-      Register today for a guaranteed spot in Hack Cincinnati &mdash; and a free
-      T-shirt!
-    </Action>
-    <Workshops />
     <Schedule />
-    <FAQs />
-    <Staff />
-    <Sponsors />
-    <Action title="Sound good?">
-      Find us on{' '}
-      <StyledOutboundLink href="https://facebook.com/hackcincinnati">
-        Facebook
-      </StyledOutboundLink>
-      ,{' '}
-      <StyledOutboundLink href="https://instagram.com/hackcincinnati">
-        Instagram
-      </StyledOutboundLink>
-      , or{' '}
-      <StyledOutboundLink href="https://twitter.com/hackcincinnati">
-        Twitter
-      </StyledOutboundLink>{' '}
-      for more details and event updates! If you have any questions, please
-      email us at{' '}
-      <StyledOutboundLink href="mailto:team@hackcincinnati.io">
-        team@hackcincinnati.io
-      </StyledOutboundLink>
-      .
+    <Workshops />
+    <Action title="Ready to submit?&nbsp;">
+      For accurate judging and voting, please submit your projects on Devpost!
+      Make sure to also tag your teammates.
     </Action>
+    <Sponsors />
+    <Staff />
+    <FAQs />
   </Layout>
 )
 

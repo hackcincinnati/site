@@ -100,28 +100,42 @@ export const ColorSpan = styled.span`
   color: ${props => props.color || colors.accent};
 `
 
+const buttonStyles = props =>
+  css`
+    background-color: ${props => props.background || colors.primary};
+    color: ${props => props.color || colors.white};
+    border: none;
+    padding: 16px 32px;
+    text-decoration: none;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 5px;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    cursor: pointer;
+    :hover,
+    :focus,
+    :active {
+      transform: scale(1.1);
+    }
+    @media (min-width: ${breakpoints.mobile}) {
+      margin: ${props => props.margin || '0px'};
+    }
+  `
+
 export const StyledButton = styled(Link)`
-  background-color: ${props => props.background || colors.primary};
-  color: ${props => props.color || colors.white};
-  border: none;
-  padding: 16px 32px;
-  text-decoration: none;
-  display: inline-block;
-  vertical-align: middle;
-  border-radius: 5px;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  transition-duration: 0.3s;
-  transition-property: transform;
-  cursor: pointer;
-  :hover,
-  :focus,
-  :active {
-    transform: scale(1.1);
-  }
-  @media (min-width: ${breakpoints.mobile}) {
-    margin: ${props => props.margin || '0px'};
-  }
+  ${buttonStyles};
+`
+
+export const StyledOutboundButton = styled(OutboundLink).attrs(
+  ({ target, rel }) => ({
+    target: target || '_blank',
+    rel: rel || 'noopener noreferrer'
+  })
+)`
+  ${buttonStyles};
 `
 
 const linkStyles = props =>
