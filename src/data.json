@@ -99,11 +99,11 @@
     "two": [
       {
         "time": "8:00pm",
-        "name": "Wireless Attack Demo"
+        "name": "Intro to Capture the Flag"
       },
       {
         "time": "9:00pm",
-        "name": "Intro to Capture the Flag"
+        "name": "Wireless Attack Demo"
       },
       {
         "time": "10:00pm",
