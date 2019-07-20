@@ -1,4 +1,124 @@
 {
+  "schedule": {
+    "saturday": [
+      {
+        "time": "8:00am",
+        "name": "Check-in Opens"
+      },
+      {
+        "time": "9:00am",
+        "name": "Opening Ceremony"
+      },
+      {
+        "time": "10:00am",
+        "name": "Hacking Begins"
+      },
+      {
+        "time": "10:00am",
+        "name": "Intro to HTML/CSS"
+      },
+      {
+        "time": "12:00pm",
+        "name": "Lunch"
+      },
+      {
+        "time": "2:00pm–6:00pm",
+        "name": "Workshop Block #1"
+      },
+      {
+        "time": "6:00pm",
+        "name": "Dinner"
+      },
+      {
+        "time": "8:00pm–11:00pm",
+        "name": "Workshop Block #2"
+      }
+    ],
+    "sunday": [
+      {
+        "time": "12:00am",
+        "name": "Midnight Snack"
+      },
+      {
+        "time": "7:00am",
+        "name": "Breakfast"
+      },
+      {
+        "time": "8:00am",
+        "name": "Intro to Augmented Reality"
+      },
+      {
+        "time": "9:00am",
+        "name": "Demonstration of Wireless Attacks"
+      },
+      {
+        "time": "10:00am",
+        "name": "Hacking Ends"
+      },
+      {
+        "time": "10:10am",
+        "name": "Judging Begins"
+      },
+      {
+        "time": "11:00am",
+        "name": "Finalist Presentations"
+      },
+      {
+        "time": "12:00pm",
+        "name": "Closing Ceremony"
+      },
+      {
+        "time": "12:15pm",
+        "name": "End of Hack Cincinnati"
+      }
+    ]
+  },
+  "workshops": {
+    "one": [
+      {
+        "time": "10:00am",
+        "name": "Intro to HTML/CSS"
+      },
+      {
+        "time": "2:00pm",
+        "name": "Intro to JavaScript"
+      },
+      {
+        "time": "3:00pm",
+        "name": "Intro to GitHub"
+      },
+      {
+        "time": "4:00pm",
+        "name": "Intro to React"
+      },
+      {
+        "time": "5:00pm",
+        "name": "Intro to Netlify"
+      }
+    ],
+    "two": [
+      {
+        "time": "8:00pm",
+        "name": "How to Build a Full-Stack App"
+      },
+      {
+        "time": "9:00pm",
+        "name": "Wireless Attack Demo"
+      },
+      {
+        "time": "10:00pm",
+        "name": "Intro to Capture the Flag"
+      },
+      {
+        "time": "11:00pm",
+        "name": "Intro to Linux Computing"
+      },
+      {
+        "time": "8:00am",
+        "name": "Intro to Augmented Reality"
+      }
+    ]
+  },
   "directors": {
     "alishaan": {
       "name": "Alishaan Ali",

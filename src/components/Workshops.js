@@ -9,6 +9,7 @@ import {
 } from '../components/Theme'
 
 import styled from 'styled-components'
+import data from '../data.json'
 
 const WorkshopContainer = styled.div`
   display: flex;
@@ -17,14 +18,14 @@ const WorkshopContainer = styled.div`
   margin: 2px 0;
 `
 
-const Workshoptitle = styled.p`
+const WorkshopTime = styled.p`
   font-weight: bold;
   color: ${colors.primary};
 `
-const WorkshopItem = ({ title, lead }) => (
+const WorkshopItem = ({ event }) => (
   <WorkshopContainer>
-    <Workshoptitle>{title}</Workshoptitle>
-    <p>{lead}</p>
+    <WorkshopTime>{event.time}</WorkshopTime>
+    <p>{event.name}</p>
   </WorkshopContainer>
 )
 
@@ -42,25 +43,18 @@ export default () => (
     <FlexContainer justify="space-between" align="flex-start">
       <FlexItem>
         <FlexContent margin="10px">
-          <WorkshopItem title="Intro to HTML/CSS" lead="Lachlan Campbell" />
-          <WorkshopItem title="Intro to JavaScript" lead="Katherine Hu" />
-          <WorkshopItem title="Intro to GitHub" lead="Ava Scherocman" />
-          <WorkshopItem title="Intro to React.JS" lead="Megan Cui" />
-          <WorkshopItem title="Intro to Netlify" lead="JAMstack" />
-          <WorkshopItem title="How to Build a Full-Stack App" lead="Sean Kim" />
+          <h3>Workshop Block #1</h3>
+          {data.workshops.one.map((event, i) => (
+            <WorkshopItem key={i} event={event} />
+          ))}
         </FlexContent>
       </FlexItem>
       <FlexItem>
         <FlexContent margin="10px">
-          <WorkshopItem title="Intro to Python Development" lead="Cyber@UC" />
-          <WorkshopItem title="Intro to Linux Computing" lead="Cyber@UC" />
-          <WorkshopItem title="Intro to Capture the Flag" lead="Cyber@UC" />
-          <WorkshopItem title="Intro to Video Game Hacking" lead="Cyber@UC" />
-          <WorkshopItem title="Intro to Augmented Reality" lead="Sean Kim" />
-          <WorkshopItem
-            title="Demonstration of Wireless Attacks"
-            lead="Cyber@UC"
-          />
+          <h3>Workshop Block #2</h3>
+          {data.workshops.two.map((event, i) => (
+            <WorkshopItem key={i} event={event} />
+          ))}
         </FlexContent>
       </FlexItem>
     </FlexContainer>
