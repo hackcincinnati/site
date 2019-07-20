@@ -99,18 +99,14 @@
     "two": [
       {
         "time": "8:00pm",
-        "name": "How to Build a Full-Stack App"
-      },
-      {
-        "time": "9:00pm",
         "name": "Wireless Attack Demo"
       },
       {
-        "time": "10:00pm",
+        "time": "9:00pm",
         "name": "Intro to Capture the Flag"
       },
       {
-        "time": "11:00pm",
+        "time": "10:00pm",
         "name": "Intro to Linux Computing"
       },
       {
