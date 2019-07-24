@@ -71,9 +71,9 @@ const Landing = () => (
         <StyledOutboundButton
           background={colors.white}
           color={colors.dark}
-          href="https://hackcincinnati.devpost.com"
+          href="https://hackcincinnati.devpost.com/submissions"
         >
-          <h4>Submit Your Project!</h4>
+          <h4>View Winners!</h4>
         </StyledOutboundButton>
       </Info>
     </Container>
