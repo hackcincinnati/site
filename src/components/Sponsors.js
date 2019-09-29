@@ -64,7 +64,7 @@ export default () => (
         eightyfourfiftyone: file(relativePath: { eq: "sponsors/8451.jpg" }) {
           ...sponsorImage
         }
-        github: file(relativePath: { eq: "sponsors/github.jpg" }) {
+        github: file(relativePath: { eq: "sponsors/github.png" }) {
           ...sponsorImage
         }
       }
@@ -88,7 +88,7 @@ export default () => (
             size={sizes.xl}
           />
         </FlexContainer>
-        <FlexContainer margin="50px">
+        <FlexContainer margin="10px">
           <Sponsor
             image={data.fifththird.childImageSharp.fluid}
             link="https://53.com"
