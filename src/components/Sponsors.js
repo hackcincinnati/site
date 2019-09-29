@@ -64,7 +64,7 @@ export default () => (
         eightyfourfiftyone: file(relativePath: { eq: "sponsors/8451.jpg" }) {
           ...sponsorImage
         }
-        github: file(relativePath: { eq: "sponsors/github.png" }) {
+        github: file(relativePath: { eq: "sponsors/github.jpg" }) {
           ...sponsorImage
         }
       }
