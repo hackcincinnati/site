@@ -105,7 +105,7 @@ export default () => (
             image={data.github.childImageSharp.fluid}
             link="https://github.com"
             name="Github"
-            size={sizes.large}
+            size={sizes.medium}
           />
         </FlexContainer>
         <FlexContainer margin="50px">
