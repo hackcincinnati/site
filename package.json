@@ -3,7 +3,7 @@
   "private": true,
   "author": "Dalton Craven <daltonjcraven@gmail.com>",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-plugin-styled-components": "^1.10.6",
     "formik": "^1.5.7",
     "gatsby": "^2.12.0",
